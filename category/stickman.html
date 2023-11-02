@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Swing Monkey</title>
+        <meta name="title" content="Swing Monkey" />
+        <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.carousel.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.theme.default.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/all62b4.css?v=1.4.3" />
+    </head>
+    <body>
+        <div class="master">
+            <div class="sidebar">
+                <div class="side-header clearfix">
+                    <div class="burger for-mobile">
+                        <i class="fal fa-bars"></i>
+                    </div>
+                     <a class="logo" href="../index.html">
+                        <img src="../images/swing-monkey.png" alt="logo">
+                    </a>
+                    <div class="bt-more for-mobile">
+                        <i class="far fa-stream"></i>
+                    </div>
+                </div>
+                <ul class="side-menu mCustomScrollbar" data-mcs-theme="dark">
+                    <li class="category-item">
+                        <a href="../category/new-game.html">New Games </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/top-picks.html">Top Picks </a>
+                    </li>
+                    
+                    <li class="category-item">
+                        <a href="../category/racing.html">Racing </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/drifting.html">Drifting </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/parking.html">Parking </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/car.html">Car </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/truck.html">Truck </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/motorbike.html">Motorbike </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/running.html">Running </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/flying.html">Flying </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/shooting.html">Shooting </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="g-content">
+                <section class="header clearfix">
+                  <div class="columns">
+                    <div class="column is-4">
+                      
+                    </div>
+                        <div class="column is-8">
+                            <ul class="main-menu nav-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/drift-hunters.html">Drift Hunters</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/crazy-driving.html">Crazy Driving</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/monstrosity-trucks.html">Monstrosity Trucks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/ultra-car.html">Ultra Car</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/moto-x3m">Moto X3M</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    window.addEventListener("DOMContentLoaded", function() {
+                        load_menu_css();
+
+                    });
+
+                    function load_menu_css() {
+                        jQuery("ul.mCustomScrollbar li.category-item").removeClass('active');
+                        jQuery("li.nav-item").removeClass('active');
+                        var href = window.location.href;
+                        var path_name = window.location.pathname;
+
+                        jQuery("ul.mCustomScrollbar li.category-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+                        jQuery("li.nav-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+
+                    }
+                </script>
+                <script type='text/javascript'>
+                    var themeurl = 'http://drivingmad.io/themes/drive-mad/';
+                    function get_format_url(controller, action) {
+                        var urlformat = '/:a:.:c:';
+                        urlformat = urlformat.replace(':c:', controller);
+                        return urlformat.replace(':a:', action);
+                    }
+                </script>
+                <div id="game_new">
+                  <section class="new-games min-h-100">
+                    <div class="container">
+                        <div class="ads-banner hidden">
+                            <span>Advertisement</span>
+                            <div class="ads"></div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="section-title">
+                                    <h1>
+                                        <span class="g-icon">
+                                            <i class="fal fa-list"></i>
+                                        </span>
+                                        Stickman
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game_category">
+                            <div class="columns is-multiline listing" id="category-games">
+                                
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickmerge.html">
+                                                    <img src="https://webglmath.github.io/stickmerge/logo.png" class="small-thumb" alt="Stickmerge">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickmerge.html">Stickmerge</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickmerge.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stick-merge-halloween.html">
+                                                    <img src="https://ubg77.github.io/edit/stick-merge-halloween/logo.png" class="small-thumb" alt="Stick Merge Halloween">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stick-merge-halloween.html">Stick Merge Halloween</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stick-merge-halloween.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-fighter-epic-battle.html">
+                                                    <img src="https://webglmath.github.io/stickman-fighter-epic-battle/logo.png" class="small-thumb" alt="Stickman Fighter Epic Battle">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-fighter-epic-battle.html">Stickman Fighter Epic Battle</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-fighter-epic-battle.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-fighter-epic-battle-2.html">
+                                                    <img src="https://webglmath.github.io/stickman-fighter-epic-battle-2/logo.png" class="small-thumb" alt="Stickman Fighter Epic Battle 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-fighter-epic-battle-2.html">Stickman Fighter Epic Battle 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-fighter-epic-battle-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickmanhook.html">
+                                                    <img src="https://webglmath.github.io/stickmanhook/logo.png" class="small-thumb" alt="Stickman Hook">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickmanhook.html">Stickman Hook</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickmanhook.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/the-spear-stickman.html">
+                                                    <img src="https://webglmath.github.io/the-spear-stickman/logo.png" class="small-thumb" alt="The Spear Stickman">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/the-spear-stickman.html">The Spear Stickman</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/the-spear-stickman.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stick-hero.html">
+                                                    <img src="https://slope-game.github.io/stick-hero/logo.png" class="small-thumb" alt="Stick Hero">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stick-hero.html">Stick Hero</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stick-hero.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-archer-3-2018.html">
+                                                    <img src="https://slope-game.github.io/stickman-archer-3-2018/logo.png" class="small-thumb" alt="Stickman Archer 3">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-archer-3-2018.html">Stickman Archer 3</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-archer-3-2018.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stick-war-ninja-duel.html">
+                                                    <img src="https://slope-game.github.io/stick-war-ninja-duel/logo.png" class="small-thumb" alt="Stick War Ninja Duel">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stick-war-ninja-duel.html">Stick War Ninja Duel</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stick-war-ninja-duel.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-war.html">
+                                                    <img src="https://slope-game.github.io/stickman-war/logo.png" class="small-thumb" alt="Stickman War">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-war.html">Stickman War</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-war.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/gun-fu-stickman-2.html">
+                                                    <img src="https://slope-game.github.io/gun-fu-stickman-2/logo.png" class="small-thumb" alt="Gun Fu Stickman 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/gun-fu-stickman-2.html">Gun Fu Stickman 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/gun-fu-stickman-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-parkour-2-lucky-block.html">
+                                                    <img src="https://slope-game.github.io/stickman-parkour-2-lucky-block/logo.png" class="small-thumb" alt="Stickman Parkour 2 Lucky Block">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-parkour-2-lucky-block.html">Stickman Parkour 2 Lucky Block</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-parkour-2-lucky-block.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-parkour-skyland.html">
+                                                    <img src="https://slope-game.github.io/stickman-parkour-skyland/logo.png" class="small-thumb" alt="Stickman Parkour Skyland">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-parkour-skyland.html">Stickman Parkour Skyland</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-parkour-skyland.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-archer-2.html">
+                                                    <img src="https://slope-game.github.io/stickman-archer-2/logo.png" class="small-thumb" alt="Stickman Archer 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-archer-2.html">Stickman Archer 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-archer-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/fall-red-stickman.html">
+                                                    <img src="https://slope-game.github.io/fall-red-stickman/logo.png" class="small-thumb" alt="Fall Red Stickman">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/fall-red-stickman.html">Fall Red Stickman</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/fall-red-stickman.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-parkour.html">
+                                                    <img src="https://rebemanae.github.io/stickman-parkour/logo.png" class="small-thumb" alt="Stickman Parkour">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-parkour.html">Stickman Parkour</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-parkour.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/noob-vs-pro-vs-stickman-jailbreak.html">
+                                                    <img src="https://rebemanae.github.io/noob-vs-pro-vs-stickman-jailbreak/logo.png" class="small-thumb" alt="Noob Vs Pro Vs Stickman Jailbreak">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/noob-vs-pro-vs-stickman-jailbreak.html">Noob Vs Pro Vs Stickman Jailbreak</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/noob-vs-pro-vs-stickman-jailbreak.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-that-one-level.html">
+                                                    <img src="https://rebemanae.github.io/stickman-that-one-level/logo.png" class="small-thumb" alt="Stickman That One Level">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-that-one-level.html">Stickman That One Level</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-that-one-level.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/red-stickman-vs-monster-school.html">
+                                                    <img src="https://rebemanae.github.io/red-stickman-vs-monster-school/logo.png" class="small-thumb" alt="Red Stickman Vs Monster School">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/red-stickman-vs-monster-school.html">Red Stickman Vs Monster School</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/red-stickman-vs-monster-school.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/red-and-blue-stickman-2.html">
+                                                    <img src="https://unblocked-games911.github.io/red-and-blue-stickman-2/logo.png" class="small-thumb" alt="Red And Blue Stickman 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/red-and-blue-stickman-2.html">Red And Blue Stickman 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/red-and-blue-stickman-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-vs-huggy-wuggy.html">
+                                                    <img src="https://classroomjq.github.io/stickman-vs-huggy-wuggy/logo.png" class="small-thumb" alt="Stickman Vs Huggy Wuggy">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-vs-huggy-wuggy.html">Stickman Vs Huggy Wuggy</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-vs-huggy-wuggy.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/noob-vs-pro-stick-war.html">
+                                                    <img src="https://classroomjq.github.io/noob-vs-pro-stick-war/logo.png" class="small-thumb" alt="Noob Vs Pro Stick War">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/noob-vs-pro-stick-war.html">Noob Vs Pro Stick War</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/noob-vs-pro-stick-war.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-planks-fall.html">
+                                                    <img src="https://classroomjq.github.io/stickman-planks-fall/logo.png" class="small-thumb" alt="Stickman Planks Fall">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-planks-fall.html">Stickman Planks Fall</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-planks-fall.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-climb.html">
+                                                    <img src="https://classroomjq.github.io/stickman-climb/logo.png" class="small-thumb" alt="Stickman Climb">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-climb.html">Stickman Climb</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-climb.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-climb-2.html">
+                                                    <img src="https://ubg77.github.io/stickman-climb-2/logo.png" class="small-thumb" alt="Stickman Climb 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-climb-2.html">Stickman Climb 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-climb-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-escape.html">
+                                                    <img src="https://classroomjq.github.io/stickman-escape/logo.png" class="small-thumb" alt="Stickman Escape">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-escape.html">Stickman Escape</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-escape.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-army-the-defenders.html">
+                                                    <img src="https://classroomjq.github.io/stickman-army-the-defenders/logo.png" class="small-thumb" alt="Stickman Army The Defenders">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-army-the-defenders.html">Stickman Army The Defenders</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-army-the-defenders.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stick-fighter.html">
+                                                    <img src="https://classroomjq.github.io/stick-fighter/logo.png" class="small-thumb" alt="Stick Fighter">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stick-fighter.html">Stick Fighter</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stick-fighter.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/war-of-sticks.html">
+                                                    <img src="https://ubg77.github.io/war-of-sticks/logo.png" class="small-thumb" alt="War Of Sticks">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/war-of-sticks.html">War Of Sticks</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/war-of-sticks.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-bike-pr.html">
+                                                    <img src="https://ubg77.github.io/stickman-bike-pr/logo.png" class="small-thumb" alt="Stickman Bike Pr">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-bike-pr.html">Stickman Bike Pr</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-bike-pr.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stick-defenders.html">
+                                                    <img src="https://classroomjq.github.io/stick-defenders/logo.png" class="small-thumb" alt="Stick Defenders">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stick-defenders.html">Stick Defenders</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stick-defenders.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-fighter-mega-brawl.html">
+                                                    <img src="https://webglmath.github.io/stickman-fighter-mega-brawl/logo.png" class="small-thumb" alt="Stickman Fighter Mega Brawl">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-fighter-mega-brawl.html">Stickman Fighter Mega Brawl</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-fighter-mega-brawl.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/stickman-go.html">
+                                                    <img src="https://slope-game.github.io/stickman-go/logo.png" class="small-thumb" alt="Stickman Go">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/stickman-go.html">Stickman Go</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/stickman-go.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/draw-and-save-stickman.html">
+                                                    <img src="https://slope-game.github.io/draw-and-save-stickman/logo.png" class="small-thumb" alt="Draw And Save Stickman">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/draw-and-save-stickman.html">Draw And Save Stickman</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/draw-and-save-stickman.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="pagination-wrapper">
+                                    <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+                                        <ul class="pagination-list">
+                                            <li>
+                                                <a class="pagination-link page-number" data-category="Stickman" data-page="2" data-limit="32" href="./stickman.html">⭬</a>
+                                            </li>
+                                            <li>
+                                                <a class="pagination-link page-number" data-category="Stickman" data-page="2" data-limit="32" href="./stickman.html">⭲</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        window.addEventListener("DOMContentLoaded", function() {
+                            jQuery('a.page-number').click(function(event) {
+                                event.preventDefault();
+                                var page = jQuery(this).data("page");
+                                var limit = jQuery(this).data("limit");
+                                var category = jQuery(this).data("category");
+                                load_data(page, limit, category, 'div#game_category');
+                            });
+
+                            function load_data(page, limit, category, main_contain_id) {
+                                var metadataload = {};
+                                metadataload.page = page;
+                                metadataload.limit = limit;
+                                metadataload.category = category;
+                                jQuery.ajax({
+                                    url: "/game-category.ajax",
+                                    data: metadataload,
+                                    type: 'GET',
+                                    success: function(data) {
+                                        jQuery(main_contain_id).html(data);
+                                        jQuery('a.page-number').click(function(event) {
+                                            event.preventDefault();
+                                            var page = jQuery(this).data("page");
+                                            var limit = jQuery(this).data("limit");
+                                            var category = jQuery(this).data("category");
+                                            load_data(page, limit, category, 'div#game_category');
+                                            //
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    </script>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

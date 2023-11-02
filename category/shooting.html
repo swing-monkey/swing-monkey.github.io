@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Swing Monkey</title>
+        <meta name="title" content="Swing Monkey" />
+        <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.carousel.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.theme.default.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/all62b4.css?v=1.4.3" />
+    </head>
+    <body>
+    <div class="master">
+            <div class="sidebar">
+                <div class="side-header clearfix">
+                    <div class="burger for-mobile">
+                        <i class="fal fa-bars"></i>
+                    </div>
+                     <a class="logo" href="../index.html">
+                        <img src="../images/swing-monkey.png" alt="logo">
+                    </a>
+                    <div class="bt-more for-mobile">
+                        <i class="far fa-stream"></i>
+                    </div>
+                </div>
+                <ul class="side-menu mCustomScrollbar" data-mcs-theme="dark">
+                   <li class="category-item">
+                        <a href="../category/new-game.html">New Games </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/top-picks.html">Top Picks </a>
+                    </li>
+                    
+                    <li class="category-item">
+                        <a href="../category/racing.html">Racing </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/drifting.html">Drifting </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/parking.html">Parking </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/car.html">Car </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/truck.html">Truck </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/motorbike.html">Motorbike </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/running.html">Running </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/flying.html">Flying </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/shooting.html">Shooting </a>
+                    </li>
+                </ul>
+            </div>
+        <div class="g-content">
+            <section class="header clearfix">
+                  <div class="columns">
+                    <div class="column is-4">
+                      
+                    </div>
+                        <div class="column is-8">
+                            <ul class="main-menu nav-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/drift-hunters.html">Drift Hunters</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/crazy-driving.html">Crazy Driving</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/monstrosity-trucks.html">Monstrosity Trucks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/ultra-car.html">Ultra Car</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/moto-x3m">Moto X3M</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    window.addEventListener("DOMContentLoaded", function() {
+                        load_menu_css();
+
+                    });
+
+                    function load_menu_css() {
+                        jQuery("ul.mCustomScrollbar li.category-item").removeClass('active');
+                        jQuery("li.nav-item").removeClass('active');
+                        var href = window.location.href;
+                        var path_name = window.location.pathname;
+
+                        jQuery("ul.mCustomScrollbar li.category-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+                        jQuery("li.nav-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+
+                    }
+                </script>
+                <script type='text/javascript'>
+                    var themeurl = 'http://drivingmad.io/themes/drive-mad/';
+                    function get_format_url(controller, action) {
+                        var urlformat = '/:a:.:c:';
+                        urlformat = urlformat.replace(':c:', controller);
+                        return urlformat.replace(':a:', action);
+                    }
+                </script>
+                <div id="game_new">
+                  <section class="new-games min-h-100">
+                    <div class="container">
+                        <div class="ads-banner hidden">
+                            <span>Advertisement</span>
+                            <div class="ads"></div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="section-title">
+                                    <h1>
+                                        <span class="g-icon">
+                                            <i class="fal fa-list"></i>
+                                        </span>
+                                        Shooting
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game_category">
+                            <div class="columns is-multiline listing" id="category-games">
+                                
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/military-shooter-training.html">
+                                                    <img src="https://classroomjq.github.io/military-shooter-training/logo.png" class="small-thumb" alt="Military Shooter Training">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/military-shooter-training.html">Military Shooter Training</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <a href="../game/military-shooter-training.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/fps-assault-shooter.html">
+                                                    <img src="https://classroomjq.github.io/fps-assault-shooter/logo.png" class="small-thumb" alt="Fps Assault Shooter">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/fps-assault-shooter.html">Fps Assault Shooter</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/fps-assault-shooter.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/saloon-robbery.html">
+                                                    <img src="https://rebemanae.github.io/saloon-robbery/logo.png" class="small-thumb" alt="Saloon Robbery">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/saloon-robbery.html">Saloon Robbery</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/saloon-robbery.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/impostor-vs-noob.html">
+                                                    <img src="https://rebemanae.github.io/impostor-vs-noob/logo.png" class="small-thumb" alt="Impostor Vs Noob">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/impostor-vs-noob.html">Impostor Vs Noob</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/impostor-vs-noob.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/mr-bullet-3d.html">
+                                                    <img src="https://rebemanae.github.io/mr-bullet-3d/logo.png" class="small-thumb" alt="Mr Bullet 3d">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/mr-bullet-3d.html">Mr Bullet 3d</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/mr-bullet-3d.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/mr-bullet-2.html">
+                                                    <img src="https://rebemanae.github.io/mr-bullet-2-online/logo.png" class="small-thumb" alt="Mr Bullet 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/mr-bullet-2.html">Mr Bullet 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/mr-bullet-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/mr-bullet.html">
+                                                    <img src="https://webglmath.github.io/mr-bullet/logo.png" class="small-thumb" alt="Mr Bullet">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/mr-bullet.html">Mr Bullet</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/mr-bullet.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/battle-royale-noob-vs-pro.html">
+                                                    <img src="https://rebemanae.github.io/battle-royale-noob-vs-pro/logo.png" class="small-thumb" alt="Battle Royale Noob Vs Pro">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/battle-royale-noob-vs-pro.html">Battle Royale Noob Vs Pro</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/battle-royale-noob-vs-pro.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/castel-wars-modern.html">
+                                                    <img src="https://slope-game.github.io/castel-wars-modern/logo.png" class="small-thumb" alt="Castel Wars Modern">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/castel-wars-modern.html">Castel Wars Modern</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/castel-wars-modern.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/agent-walker-vs-skibidi-toilets.html">
+                                                    <img src="https://slope-game.github.io/agent-walker-vs-skibidi-toilets/logo.png" class="small-thumb" alt="Agent Walker Vs Skibidi Toilets">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/agent-walker-vs-skibidi-toilets.html">Agent Walker Vs Skibidi Toilets</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/agent-walker-vs-skibidi-toilets.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/gunblood.html">
+                                                    <img src="https://slope-game.github.io/gunblood/logo.png" class="small-thumb" alt="Gunblood">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/gunblood.html">Gunblood</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/gunblood.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/raft-wars.html">
+                                                    <img src="https://webglmath.github.io/raft-wars/logo.png" class="small-thumb" alt="Raft Wars">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/raft-wars.html">Raft Wars</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/raft-wars.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/raft-wars-2.html">
+                                                    <img src="https://webglmath.github.io/raft-wars/logo.png" class="small-thumb" alt="Raft Wars 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/raft-wars-2.html">Raft Wars 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/raft-wars-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/rooftop-shooters.html">
+                                                    <img src="https://slope-game.github.io/rooftop-shooters/logo.png" class="small-thumb" alt="Rooftop Shooters">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/rooftop-shooters.html">Rooftop Shooters</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/rooftop-shooters.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/rooftop-snipers.html">
+                                                    <img src="https://webglmath.github.io/rooftop-snipers/logo.png" class="small-thumb" alt="Rooftop Snipers">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/rooftop-snipers.html">Rooftop Snipers</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/rooftop-snipers.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/rooftop-snipers-2.html">
+                                                    <img src="https://rebemanae.github.io/rooftop-snipers-2/logo.png" class="small-thumb" alt="Rooftop Snipers 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/rooftop-snipers-2.html">Rooftop Snipers 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/rooftop-snipers-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/miami-crime-simulator-3d.html">
+                                                    <img src="https://trafficjam3d.github.io/miami-crime-simulator-3d/logo.png" class="small-thumb" alt="Miami Crime Simulator 3d">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/miami-crime-simulator-3d.html">Miami Crime Simulator 3d</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/miami-crime-simulator-3d.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/pixel-shooter.html">
+                                                    <img src="https://ubg77.github.io/pixel-shooter/logo.png" class="small-thumb" alt="Pixel Shooter">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/pixel-shooter.html">Pixel Shooter</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/pixel-shooter.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/funny-shooter-2.html">
+                                                    <img src="https://classroomjq.github.io/funny-shooter-2/logo.png" class="small-thumb" alt="Funny Shooter 2">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/funny-shooter-2.html">Funny Shooter 2</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/funny-shooter-2.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/skibidi-toilet-attack.html">
+                                                    <img src="https://unblocked-games911.github.io/skibidi-toilet-attack/logo.png" class="small-thumb" alt="Skibidi Toilet Attack">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/skibidi-toilet-attack.html">Skibidi Toilet Attack</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/skibidi-toilet-attack.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/you-vs-100-skibidi-toilets.html">
+                                                    <img src="https://unblocked-games911.github.io/you-vs-100-skibidi-toilets/logo.png" class="small-thumb" alt="You Vs 100 Skibidi Toilets">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/you-vs-100-skibidi-toilets.html">You Vs 100 Skibidi Toilets</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/you-vs-100-skibidi-toilets.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/skibidi-toilet-rampage.html">
+                                                    <img src="https://unblocked-games911.github.io/skibidi-toilet-rampage/logo.png" class="small-thumb" alt="Skibidi Toilet Rampage">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/skibidi-toilet-rampage.html">Skibidi Toilet Rampage</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/skibidi-toilet-rampage.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/blockpost.html">
+                                                    <img src="https://classroomjq.github.io/blockpost/logo.png" class="small-thumb" alt="Block Post">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/blockpost.html">Block Post</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/blockpost.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/superhot-prototype.html">
+                                                    <img src="https://classroomjq.github.io/superhot-prototype/logo.png" class="small-thumb" alt="Superhot Prototype">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/superhot-prototype.html">Superhot Prototype</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/superhot-prototype.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/bacon-may-die.html">
+                                                    <img src="https://rebemanae.github.io/bacon-may-die/logo.png" class="small-thumb" alt="Bacon May Die">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/bacon-may-die.html">Bacon May Die</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/bacon-may-die.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/shootz.html">
+                                                    <img src="https://ubg77.github.io/shootz/logo.png" class="small-thumb" alt="Shootz">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/shootz.html">Shootz</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/shootz.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/hammer-2-reloaded.html">
+                                                    <img src="https://rebemanae.github.io/hammer-2-reloaded/logo.png" class="small-thumb" alt="Hammer 2 Reloaded">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/hammer-2-reloaded.html">Hammer 2 Reloaded</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/hammer-2-reloaded.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/battle-forces.html">
+                                                    <img src="https://classroomjq.github.io/battle-forces/logo.png" class="small-thumb" alt="Battle Forces">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/battle-forces.html">Battle Forces</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/battle-forces.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                                              
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/1v1-lol.html">
+                                                    <img src="https://webglmath.github.io/1v1-lol/logo.png" class="small-thumb" alt="1v1 Lol">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/1v1-lol.html">1v1 Lol</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/1v1-lol.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/gun-fest.html">
+                                                    <img src="https://slope-game.github.io/file/gun-fest/logo.png" class="small-thumb" alt="Gun Fest">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/gun-fest.html">Gun Fest</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/gun-fest.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="pagination-wrapper">
+                                    <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+                                        <ul class="pagination-list">
+                                            <li>
+                                                <a class="pagination-link page-number" data-category="Shooting" data-page="2" data-limit="32" href="./shooting.html">⭬</a>
+                                            </li>
+                                            <li>
+                                                <a class="pagination-link page-number" data-category="Shooting" data-page="2" data-limit="32" href="./shooting.html">⭲</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        window.addEventListener("DOMContentLoaded", function() {
+                            jQuery('a.page-number').click(function(event) {
+                                event.preventDefault();
+                                var page = jQuery(this).data("page");
+                                var limit = jQuery(this).data("limit");
+                                var category = jQuery(this).data("category");
+                                load_data(page, limit, category, 'div#game_category');
+                            });
+
+                            function load_data(page, limit, category, main_contain_id) {
+                                var metadataload = {};
+                                metadataload.page = page;
+                                metadataload.limit = limit;
+                                metadataload.category = category;
+                                jQuery.ajax({
+                                    url: "/game-category.ajax",
+                                    data: metadataload,
+                                    type: 'GET',
+                                    success: function(data) {
+                                        jQuery(main_contain_id).html(data);
+                                        jQuery('a.page-number').click(function(event) {
+                                            event.preventDefault();
+                                            var page = jQuery(this).data("page");
+                                            var limit = jQuery(this).data("limit");
+                                            var category = jQuery(this).data("category");
+                                            load_data(page, limit, category, 'div#game_category');
+                                            //
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    </script>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Swing Monkey</title>
+        <meta name="title" content="Swing Monkey" />
+        <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.carousel.min.css" />
+        <link type="text/css" rel="stylesheet" href="../js/OwlCarousel/assets/owl.theme.default.min.css" />
+        <link rel="stylesheet" type="text/css" href="../css/all62b4.css?v=1.4.3" />
+    </head>
+    <body>
+        <div class="master">
+            <div class="sidebar">
+                <div class="side-header clearfix">
+                    <div class="burger for-mobile">
+                        <i class="fal fa-bars"></i>
+                    </div>
+                     <a class="logo" href="../index.html">
+                        <img src="../images/swing-monkey.png" alt="logo">
+                    </a>
+                    <div class="bt-more for-mobile">
+                        <i class="far fa-stream"></i>
+                    </div>
+                </div>
+                <ul class="side-menu mCustomScrollbar" data-mcs-theme="dark">
+                    <li class="category-item">
+                        <a href="../category/new-game.html">New Games </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/top-picks.html">Top Picks </a>
+                    </li>
+                    
+                    <li class="category-item">
+                        <a href="../category/racing.html">Racing </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/drifting.html">Drifting </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/parking.html">Parking </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/car.html">Car </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/truck.html">Truck </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/motorbike.html">Motorbike </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/running.html">Running </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/flying.html">Flying </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="../category/shooting.html">Shooting </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="g-content">
+                <section class="header clearfix">
+                  <div class="columns">
+                    <div class="column is-4">
+                      
+                    </div>
+                        <div class="column is-8">
+                            <ul class="main-menu nav-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/drift-hunters.html">Drift Hunters</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/crazy-driving.html">Crazy Driving</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/monstrosity-trucks.html">Monstrosity Trucks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../game/ultra-car.html">Ultra Car</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/moto-x3m">Moto X3M</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    window.addEventListener("DOMContentLoaded", function() {
+                        load_menu_css();
+
+                    });
+
+                    function load_menu_css() {
+                        jQuery("ul.mCustomScrollbar li.category-item").removeClass('active');
+                        jQuery("li.nav-item").removeClass('active');
+                        var href = window.location.href;
+                        var path_name = window.location.pathname;
+
+                        jQuery("ul.mCustomScrollbar li.category-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+                        jQuery("li.nav-item a").each(function(e) {
+                            var current_url = jQuery(this).attr('href');
+                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
+                                jQuery(this).parent().addClass("active");
+                            }
+                        });
+
+                    }
+                </script>
+                <script type='text/javascript'>
+                    var themeurl = 'http://drivingmad.io/themes/drive-mad/';
+                    function get_format_url(controller, action) {
+                        var urlformat = '/:a:.:c:';
+                        urlformat = urlformat.replace(':c:', controller);
+                        return urlformat.replace(':a:', action);
+                    }
+                </script>
+                <section class="new-games min-h-100">
+                    <div class="container">
+                        <div class="ads-banner hidden">
+                            <span>Advertisement</span>
+                            <div class="ads"></div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="section-title">
+                                    <h1>
+                                        <span class="g-icon">
+                                            <i class="fal fa-list"></i>
+                                        </span>
+                                        Puzzle
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="game_category">
+                            <div class="columns is-multiline listing" id="category-games">
+                                
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/2048.html">
+                                                    <img src="https://webglmath.github.io/2048/logo.png" class="small-thumb" alt="2048">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/2048.html">2048</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <a href="../game/2048.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/b-cubed.html">
+                                                    <img src="https://webglmath.github.io/b-cubed/logo.png" class="small-thumb" alt="B Cubed">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/b-cubed.html">B Cubed</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/b-cubed.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/drop-the-number.html">
+                                                    <img src="https://slope-game.github.io/drop-the-number/logo.png" class="small-thumb" alt="Drop The Number">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/drop-the-number.html">Drop The Number</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/drop-the-number.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/jewel-shuffle.html">
+                                                    <img src="https://webglmath.github.io/jewel-shuffle/logo.png" class="small-thumb" alt="Jewel Shuffle">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/jewel-shuffle.html">Jewel Shuffle</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/jewel-shuffle.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/ludo-hero.html">
+                                                    <img src="https://slope-game.github.io/img/ludo-hero.png" class="small-thumb" alt="Ludo Hero">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/ludo-hero.html">Ludo Hero</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/ludo-hero.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/hell-tile.html">
+                                                    <img src="https://slope-game.github.io/new3623/hell-tile/logo.png" class="small-thumb" alt="Hell Tile">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/hell-tile.html">Hell Tile</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/hell-tile.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/merge-alphabet.html">
+                                                    <img src="https://slope-game.github.io/file/merge-alphabet/logo.png" class="small-thumb" alt="Merge Alphabet">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/merge-alphabet.html">Merge Alphabet</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/merge-alphabet.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/merge-master.html">
+                                                    <img src="https://slope-game.github.io/file/merge-master/logo.png" class="small-thumb" alt="Merge Master">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/merge-master.html">Merge Master</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/merge-master.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>                                                                      
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/merge-rainbow.html">
+                                                    <img src="https://slope-game.github.io/file/merge-rainbow/logo.png" class="small-thumb" alt="Merge Rainbow">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/merge-rainbow.html">Merge Rainbow</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/merge-rainbow.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/rainbow-stacker.html">
+                                                    <img src="https://webglmath.github.io/rainbow-stacker/logo.png" class="small-thumb" alt="Rainbow Stacker">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/rainbow-stacker.html">Rainbow Stacker</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/rainbow-stacker.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-2-widescreen is-3-desktop is-4-tablet is-6-mobile grid-item show">
+                                    <div class="g-card">
+                                        <div class="pic">
+                                            <figure class="ratio ratio-1">
+                                                <a href="../game/block-toggle.html">
+                                                    <img src="https://slope-game.github.io/block-toggle/logo.png" class="small-thumb" alt="Block Toggle">
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="g-info">
+                                            <h3 class="grid-title ellipsis">
+                                                <a href="../game/block-toggle.html">Block Toggle</a>
+                                            </h3>
+                                            <div class="info">
+                                                <div class="rating ellipsis">
+                                                    <i class="ico fas fa-star"></i>
+                                                   
+                                                </div>
+                                            </div>
+                                            <a href="../game/block-toggle.html" class="bt-play">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-12">
+                                    <div class="pagination-wrapper">
+                                        <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+                                            <ul class="pagination-list">
+                                                 <li>
+                                                    <a class="pagination-link page-number" data-category="car" data-page="2" data-limit="32" href="./top-picks.html">⭬</a>
+                                                </li>
+                                                <li>
+                                                    <a class="pagination-link page-number" data-category="car" data-page="4" data-limit="32" href="./top-picks.html">⭲</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            window.addEventListener("DOMContentLoaded", function() {
+                                jQuery('a.page-number').click(function(event) {
+                                    event.preventDefault();
+                                    var page = jQuery(this).data("page");
+                                    var limit = jQuery(this).data("limit");
+                                    var category = jQuery(this).data("category");
+                                    load_data(page, limit, category, 'div#game_category');
+                                });
+
+                                function load_data(page, limit, category, main_contain_id) {
+                                    var metadataload = {};
+                                    metadataload.page = page;
+                                    metadataload.limit = limit;
+                                    metadataload.category = category;
+                                    jQuery.ajax({
+                                        url: "/game-category.ajax",
+                                        data: metadataload,
+                                        type: 'GET',
+                                        success: function(data) {
+                                            jQuery(main_contain_id).html(data);
+                                            jQuery('a.page-number').click(function(event) {
+                                                event.preventDefault();
+                                                var page = jQuery(this).data("page");
+                                                var limit = jQuery(this).data("limit");
+                                                var category = jQuery(this).data("category");
+                                                load_data(page, limit, category, 'div#game_category');
+                                                //
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        </script>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

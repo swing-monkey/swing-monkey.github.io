@@ -67,8 +67,7 @@
                 <section class="header clearfix">
                   <div class="columns">
                     <div class="column is-4">
-                      
-                    </div>
+                           </div>
                         <div class="column is-8">
                             <ul class="main-menu nav-menu">
                                 <li class="nav-item">
@@ -90,41 +89,6 @@
                         </div>
                     </div>
                 </section>
-                <script>
-                    window.addEventListener("DOMContentLoaded", function() {
-                        load_menu_css();
-
-                    });
-
-                    function load_menu_css() {
-                        jQuery("ul.mCustomScrollbar li.category-item").removeClass('active');
-                        jQuery("li.nav-item").removeClass('active');
-                        var href = window.location.href;
-                        var path_name = window.location.pathname;
-
-                        jQuery("ul.mCustomScrollbar li.category-item a").each(function(e) {
-                            var current_url = jQuery(this).attr('href');
-                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
-                                jQuery(this).parent().addClass("active");
-                            }
-                        });
-                        jQuery("li.nav-item a").each(function(e) {
-                            var current_url = jQuery(this).attr('href');
-                            if (href == current_url || href == current_url + "/" || path_name == current_url) {
-                                jQuery(this).parent().addClass("active");
-                            }
-                        });
-
-                    }
-                </script>
-                <script type='text/javascript'>
-                    var themeurl = 'http://drivingmad.io/themes/drive-mad/';
-                    function get_format_url(controller, action) {
-                        var urlformat = '/:a:.:c:';
-                        urlformat = urlformat.replace(':c:', controller);
-                        return urlformat.replace(':a:', action);
-                    }
-                </script>
                 <section class="new-games min-h-100">
                     <div class="container">
                         <div class="ads-banner hidden">
@@ -547,40 +511,6 @@
                                 </div>
                             </div>
                         </div>
-                        <script type="text/javascript">
-                            window.addEventListener("DOMContentLoaded", function() {
-                                jQuery('a.page-number').click(function(event) {
-                                    event.preventDefault();
-                                    var page = jQuery(this).data("page");
-                                    var limit = jQuery(this).data("limit");
-                                    var category = jQuery(this).data("category");
-                                    load_data(page, limit, category, 'div#game_category');
-                                });
-
-                                function load_data(page, limit, category, main_contain_id) {
-                                    var metadataload = {};
-                                    metadataload.page = page;
-                                    metadataload.limit = limit;
-                                    metadataload.category = category;
-                                    jQuery.ajax({
-                                        url: "/game-category.ajax",
-                                        data: metadataload,
-                                        type: 'GET',
-                                        success: function(data) {
-                                            jQuery(main_contain_id).html(data);
-                                            jQuery('a.page-number').click(function(event) {
-                                                event.preventDefault();
-                                                var page = jQuery(this).data("page");
-                                                var limit = jQuery(this).data("limit");
-                                                var category = jQuery(this).data("category");
-                                                load_data(page, limit, category, 'div#game_category');
-                                                //
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        </script>
                     </div>
                 </section>
             </div>

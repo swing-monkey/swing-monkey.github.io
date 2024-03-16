@@ -4,7 +4,7 @@
     --poppins: 'Poppins', sans-serif;
     --anim: all ease-out 0.3s;
     --solid: rgb(103, 88, 250);
-    --linear: linear-gradient(#0080f5, #0096ff);
+    --linear: linear-gradient(#daedff, #0096ff);
     --color2: rgb(38, 38, 83);
 }
 
@@ -5782,6 +5782,7 @@ button.dropdown-item.is-active {
     max-height: calc(100vh - 40px);
     overflow: hidden;
     -ms-overflow-y: visible
+    
 }
 
 .modal-card-foot,
@@ -12617,7 +12618,7 @@ figure,
 }
 
 .master {
-    width: 100%;
+    width: 100%;    
     float: left;
     position: relative;
 }
@@ -13314,8 +13315,7 @@ section.section-copyright {
 }
 
 .article-ct {
-    width: 100%;
-    float: left;
+    width: 80%;
 }
 
 .article-ct p {
@@ -14614,9 +14614,6 @@ table.scoreboard tbody tr {
     animation-delay: -.4s
 }
 
-.arrow-more-game i {
-}
-
 @keyframes animate {
     0% {
         opacity: 0;
@@ -14677,6 +14674,7 @@ table.scoreboard tbody tr {
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 19%);
+    margin: auto;
 }
 .game_description ul,.game_description ol{
 	list-style:disc;
@@ -14973,4 +14971,56 @@ table.scoreboard tbody tr {
 }
 .scale-button:hover {
     transform: scale(1.05);
+}
+.br-bg,.br-item, .br-item-1, .br-item-2, .br-item-3, .br-item-4 {
+    background:(#0080f5, #0096ff);
+}
+
+.home-middle-cate .br-item {
+    width: 728px;
+    height: 90px
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+    display: flex
+}
+
+.br-box {
+    margin-bottom: 30px
+}
+
+.br-box,.br-box-top, .br-box-top-1, .br-box-top-2, .br-box-top-3, .br-box-top-4 {
+    float: left;
+    width: 100%;
+    margin-top: 30px
+}
+.home-top .br-item {
+    width: 150px;
+    height: 728px;
+}
+
+.home-top-1 .br-item-1 {
+    width: 728px;
+    height: 90px;
+    margin-right: center;
+}
+.home-top-2 .br-item-2 {
+    width: 336px;
+    height: 280px;
+}
+.home-top-3 .br-item-3 {
+    width:300px;
+    height: 600px
+}
+.home-top-4 .br-item-4 {
+    width: 150px;
+    height: 728px;
+}
+.home-top-5 .br-item-5 {
+    width: 600px;
+    height: 300px;
+    background: (#0080f5, #0096ff);
+    margin-top: 10px;
 }

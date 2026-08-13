@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Cars Punk - Play Free Online Game | Swing Monkey Arcade</title>
+  <meta name="description"
+    content="Play Cyber Cars Punk Racing for free! Drive high-speed futuristic neon supercars across cyberpunk cities and dominate neon tracks.">
+  <meta name="title" content="Cyber Cars Punk - Free Online 3D Sci-Fi Racing Game" />
+
+  <!-- Fonts & Styles -->
+  <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/modern.css" />
+  <link rel="stylesheet" type="text/css" href="../css/play.css" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964980751221225"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TGXVPXYKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7TGXVPXYKT');
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-logo" href="../index.html" id="brand-home-link">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="nav-link" href="../index.html#highlights">Highlights</a></li>
+        <li><a class="nav-link" href="../index.html#more-games">Game Library</a></li>
+        <li><a class="nav-link btn-play-now" href="./swing-monkey.html"><i class="fas fa-gamepad"></i> Play Swing
+            Monkey</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Game Room Main Container -->
+  <main class="game-room-container">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar">
+      <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="../index.html#more-games">3D Racing</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="breadcrumb-current" id="breadcrumb-title">Cyber Cars Punk</span>
+    </nav>
+
+    <!-- Primary Game Arena Column -->
+    <section class="game-arena-column">
+
+      <!-- Main Stage Container -->
+      <div class="game-stage-container">
+        <div class="game-header-bar">
+          <div class="game-meta-group">
+            <img src="https://classroomjq.github.io/cyber-cars-punk-racing/logo.png" alt="Cyber Cars Punk Icon"
+              class="game-icon-thumb" id="active-game-icon">
+            <div class="game-title-details">
+              <h1 id="active-game-title">Cyber Cars Punk</h1>
+              <div class="game-tags-list">
+                <span class="game-tag-pill" id="active-game-category">3D Racing</span>
+                <div class="game-rating-stars" id="active-game-rating">
+                  <i class="fas fa-star"></i> 4.7
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="game-controls-toolbar">
+            <button class="btn-ctrl" onclick="reloadActiveGame()" title="Restart Game">
+              <i class="fal fa-sync"></i> <span>Restart</span>
+            </button>
+            <button class="btn-ctrl" id="theater-btn" onclick="toggleTheaterMode()" title="Theater Mode">
+              <i class="fal fa-compress-wide"></i> <span>Theater</span>
+            </button>
+            <button class="btn-ctrl" onclick="openFullscreen()" title="Fullscreen Mode">
+              <i class="fal fa-expand-arrows"></i> <span>Fullscreen</span>
+            </button>
+            <button class="btn-ctrl btn-favorite" id="fav-btn" onclick="toggleFavorite()" title="Favorite Game">
+              <i class="fal fa-heart"></i>
+            </button>
+            <button class="btn-ctrl" onclick="shareGame()" title="Share Link">
+              <i class="fal fa-share-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Viewport Iframe Box -->
+        <div class="game-viewport-box">
+          <iframe id="game-stage-iframe" loading="lazy" src="https://classroomjq.github.io/cyber-cars-punk-racing/"
+            allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- Quick Control Instructions & Overview -->
+      <div class="game-instructions-card">
+        <h2 class="card-title-heading">
+          <i class="fas fa-gamepad"></i> Controls & How to Play
+        </h2>
+
+        <div class="controls-grid" id="controls-grid-container">
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-car"></i></div>
+            <div class="key-info">
+              <strong>WASD / Arrow Keys</strong>
+              <span>Drive & steer vehicle</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="key-info">
+              <strong>N Key</strong>
+              <span>Activate Nitro boost</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-hand-paper"></i></div>
+            <div class="key-info">
+              <strong>Spacebar</strong>
+              <span>Handbrake turn</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="game-description-text" id="active-game-description">
+          Drive high-speed futuristic neon supercars across futuristic cyberpunk cities! Upgrade engines, unlock sci-fi
+          vehicles, and dominate neon tracks.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Sidebar Column: More Games Picker -->
+    <aside class="sidebar-column">
+      <div class="sidebar-box">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-fire"></i> More Games</h2>
+          <a href="../index.html#more-games"
+            style="font-size: 0.82rem; color: var(--accent-green); font-weight: 600;">View All</a>
+        </div>
+
+        <div class="sidebar-games-list" id="sidebar-games-container">
+          <!-- Dynamic sidebar game cards generated by JS -->
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a class="brand-logo" href="../index.html">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+      <p>&copy; Swing Monkey Arcade. Play free online physics and arcade games.</p>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home Page</a></li>
+        <li><a href="./swing-monkey.html">Swing Monkey</a></li>
+        <li><a href="../index.html#more-games">All Games</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Script for Game Room State & Data -->
+  <script>
+    const GAMES_DB = {
+      'swing-monkey': {
+        id: 'swing-monkey',
+        title: 'Swing Monkey',
+        url: 'https://slope-game.github.io/swing-monkey/',
+        icon: '../images/swing-monkey.png',
+        category: 'Physics Arcade',
+        rating: '5.0',
+        description: 'Swing Monkey is an exhilarating physics-based swinging game. Tap and hold to hook your vine onto wooden pegs, gain aerial momentum, and bounce off trampolines to cross the jungle finish line!',
+        controls: [
+          { icon: 'fas fa-mouse-pointer', key: 'Click & Hold / Tap', desc: 'Attach swinging vine' },
+          { icon: 'fas fa-wind', key: 'Release', desc: 'Launch monkey into the air' },
+          { icon: 'fas fa-bolt', key: 'Trampolines', desc: 'Bounce for speed boost' }
+        ]
+      },
+      'monkey-mart': {
+        id: 'monkey-mart',
+        title: 'Monkey Mart',
+        url: 'https://slope-game.github.io/newgame/monkey-mart/',
+        icon: 'https://slope-game.github.io/newgame/monkey-mart/logo.png',
+        category: 'Management',
+        rating: '5.0',
+        description: 'Monkey Mart is an engaging idle management game where you control a monkey running a super market. Plant crops, harvest fruits, stock shelves, and expand your monkey retail empire!',
+        controls: [
+          { icon: 'fas fa-arrows-alt', key: 'WASD / Arrow Keys', desc: 'Move your monkey around' },
+          { icon: 'fas fa-shopping-basket', key: 'Auto Collect', desc: 'Stand near items to harvest/sell' },
+          { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Spend cash to unlock new counters' }
+        ]
+      },
+      'money-movers-3': {
+        id: 'money-movers-3',
+        title: 'Money Movers 3',
+        url: 'https://slope-game.github.io/new3723/money-movers-3/',
+        icon: 'https://slope-game.github.io/new3723/money-movers-3/logo.png',
+        category: 'Puzzle',
+        rating: '4.8',
+        description: 'Money Movers 3: Guard Duty! Team up with a loyal K-9 police dog and prison guard to capture fleeing crooks across tricky obstacle courses in this fun co-op puzzle game.',
+        controls: [
+          { icon: 'fas fa-user', key: 'WASD Keys', desc: 'Control the police guard' },
+          { icon: 'fas fa-dog', key: 'Arrow Keys', desc: 'Control the police dog' },
+          { icon: 'fas fa-hand-paper', key: 'Spacebar', desc: 'Cuff thieves' }
+        ]
+      },
+      'moto-x3m': {
+        id: 'moto-x3m',
+        title: 'Moto X3M',
+        url: 'https://slope-game.github.io/moto-x3m/',
+        icon: 'https://slope-game.github.io/moto-x3m/logo.png',
+        category: 'Bike Racing',
+        rating: '4.9',
+        description: 'Moto X3M is the ultimate stunt bike racing game featuring 25+ challenging levels. Perform front and backflips over giant saws, explosives, and spikes to get 3 stars!',
+        controls: [
+          { icon: 'fas fa-arrow-up', key: 'Up Arrow / W', desc: 'Accelerate bike' },
+          { icon: 'fas fa-arrow-down', key: 'Down Arrow / S', desc: 'Brake / Reverse' },
+          { icon: 'fas fa-sync-alt', key: 'Left / Right Arrow', desc: 'Lean and perform flips' }
+        ]
+      },
+      'cyber-cars-punk-racing': {
+        id: 'cyber-cars-punk-racing',
+        title: 'Cyber Cars Punk',
+        url: 'https://classroomjq.github.io/cyber-cars-punk-racing/',
+        icon: 'https://classroomjq.github.io/cyber-cars-punk-racing/logo.png',
+        category: '3D Racing',
+        rating: '4.7',
+        description: 'Drive high-speed futuristic neon supercars across futuristic cyberpunk cities! Upgrade engines, unlock sci-fi vehicles, and dominate neon tracks.',
+        controls: [
+          { icon: 'fas fa-car', key: 'WASD / Arrow Keys', desc: 'Drive & steer vehicle' },
+          { icon: 'fas fa-tachometer-alt', key: 'N Key', desc: 'Activate Nitro boost' },
+          { icon: 'fas fa-hand-paper', key: 'Spacebar', desc: 'Handbrake turn' }
+        ]
+      },
+      'neon-biker': {
+        id: 'neon-biker',
+        title: 'Neon Biker',
+        url: 'https://slope-game.github.io/neon-biker/',
+        icon: 'https://slope-game.github.io/neon-biker/logo.png',
+        category: 'Arcade',
+        rating: '4.6',
+        description: 'Drive your glowing neon motorcycle over steep hills, loops, and dangerous drops! Perform continuous flips to score high points without crashing.',
+        controls: [
+          { icon: 'fas fa-mouse-pointer', key: 'Click & Hold', desc: 'Accelerate and spin' },
+          { icon: 'fas fa-hand-paper', key: 'Release', desc: 'Stop accelerating' }
+        ]
+      },
+      'slope': {
+        id: 'slope',
+        title: 'Slope',
+        url: 'https://slope-game.github.io/slope/',
+        icon: 'https://slope-game.github.io/slope/logo.png',
+        category: '3D Running',
+        rating: '4.9',
+        description: 'Slope is an endless 3D running game. Control a rolling ball down an infinite neon slope, avoid moving red barriers, and survive at high speeds!',
+        controls: [
+          { icon: 'fas fa-arrow-left', key: 'A / Left Arrow', desc: 'Steer ball left' },
+          { icon: 'fas fa-arrow-right', key: 'D / Right Arrow', desc: 'Steer ball right' }
+        ]
+      },
+      'tunnel-rush': {
+        id: 'tunnel-rush',
+        title: 'Tunnel Rush',
+        url: 'https://slope-game.github.io/tunnel-rush/',
+        icon: 'https://slope-game.github.io/tunnel-rush/logo.png',
+        category: 'Speed Arcade',
+        rating: '4.8',
+        description: 'Tunnel Rush is a high-speed 3D tunnel runner game. Steer around spinning barriers and color-changing obstacles in a fastpaced futuristic tunnel.',
+        controls: [
+          { icon: 'fas fa-arrow-left', key: 'A / Left Arrow', desc: 'Rotate tunnel left' },
+          { icon: 'fas fa-arrow-right', key: 'D / Right Arrow', desc: 'Rotate tunnel right' },
+          { icon: 'fas fa-pause', key: 'Spacebar', desc: 'Pause game' }
+        ]
+      },
+      'drive-mad': {
+        id: 'drive-mad',
+        title: 'Drive Mad',
+        url: 'https://slope-game.github.io/drive-mad/',
+        icon: 'https://slope-game.github.io/drive-mad/logo.png',
+        category: 'Physics Driving',
+        rating: '4.9',
+        description: 'Drive Mad is an exciting physics truck driving game with 100+ creative levels. Balance your monster truck over bridges, ramps, and flipping obstacles to reach the finish flag.',
+        controls: [
+          { icon: 'fas fa-arrow-right', key: 'W / Up / D', desc: 'Drive forward' },
+          { icon: 'fas fa-arrow-left', key: 'S / Down / A', desc: 'Reverse / Lean back' }
+        ]
+      }
+    };
+
+    let currentGameKey = 'cyber-cars-punk-racing';
+
+    function initGameRoom() {
+      const gameData = GAMES_DB[currentGameKey];
+
+      document.title = `${gameData.title} - Play Free Online Game | Swing Monkey Arcade`;
+      document.getElementById('breadcrumb-title').innerText = gameData.title;
+      document.getElementById('active-game-title').innerText = gameData.title;
+      document.getElementById('active-game-category').innerText = gameData.category;
+      document.getElementById('active-game-rating').innerHTML = `<i class="fas fa-star"></i> ${gameData.rating}`;
+      document.getElementById('active-game-icon').src = gameData.icon;
+      document.getElementById('active-game-description').innerText = gameData.description;
+
+      const iframe = document.getElementById('game-stage-iframe');
+      if (iframe) {
+        iframe.src = gameData.url;
+      }
+
+      const controlsContainer = document.getElementById('controls-grid-container');
+      if (controlsContainer && gameData.controls) {
+        controlsContainer.innerHTML = gameData.controls.map(c => `
+          <div class="control-key-card">
+            <div class="key-badge"><i class="${c.icon}"></i></div>
+            <div class="key-info">
+              <strong>${c.key}</strong>
+              <span>${c.desc}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      renderSidebarGames();
+      checkFavoriteStatus();
+    }
+
+    function renderSidebarGames() {
+      const sidebarContainer = document.getElementById('sidebar-games-container');
+      if (!sidebarContainer) return;
+
+      sidebarContainer.innerHTML = Object.values(GAMES_DB).map(game => {
+        const isActive = game.id === currentGameKey ? 'active' : '';
+        return `
+          <a href="./${game.id}.html" class="sidebar-game-card ${isActive}">
+            <img src="${game.icon}" alt="${game.title}" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">${game.title}</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> ${game.rating}</span>
+                <span>• ${game.category}</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    function openFullscreen() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (!iframe) return;
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+
+    function reloadActiveGame() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
+    }
+
+    function toggleTheaterMode() {
+      document.body.classList.toggle('theater-mode');
+      const btn = document.getElementById('theater-btn');
+      if (btn) {
+        btn.classList.toggle('active');
+      }
+    }
+
+    function toggleFavorite() {
+      const favBtn = document.getElementById('fav-btn');
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+
+      if (favs.includes(currentGameKey)) {
+        favs = favs.filter(k => k !== currentGameKey);
+        favBtn.classList.remove('active');
+        favBtn.innerHTML = '<i class="fal fa-heart"></i>';
+      } else {
+        favs.push(currentGameKey);
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+      localStorage.setItem('swing_monkey_favs', JSON.stringify(favs));
+    }
+
+    function checkFavoriteStatus() {
+      const favBtn = document.getElementById('fav-btn');
+      if (!favBtn) return;
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+      if (favs.includes(currentGameKey)) {
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+    }
+
+    function shareGame() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Game link copied to clipboard!');
+        });
+      } else {
+        alert(window.location.href);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initGameRoom);
+  </script>
+</body>
+
+</html>

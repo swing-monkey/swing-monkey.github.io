@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drive Mad - Play Free Online Game | Swing Monkey Arcade</title>
+  <title>GunSpin - Play Free Online Game | Swing Monkey Arcade</title>
   <meta name="description"
-    content="Play Drive Mad online for free! Exciting physics truck driving game with 100+ creative levels, bridges, ramps, and monster truck stunts.">
-  <meta name="title" content="Drive Mad - Free Online Physics Driving Game" />
+    content="Play GunSpin online for free! Fire your gun to use the recoil momentum, soar across the desert, collect bonuses, and unlock powerful firearms in this exciting physics game.">
+  <meta name="title" content="GunSpin - Free Online Physics Shooting Game" />
 
   <!-- Fonts & Styles -->
   <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
@@ -55,9 +55,9 @@
     <nav class="breadcrumb-bar">
       <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
       <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-      <a href="../index.html#more-games">Physics Driving</a>
+      <a href="../index.html#more-games">Action</a>
       <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-      <span class="breadcrumb-current" id="breadcrumb-title">Drive Mad</span>
+      <span class="breadcrumb-current" id="breadcrumb-title">GunSpin</span>
     </nav>
 
     <!-- Primary Game Arena Column -->
@@ -67,12 +67,11 @@
       <div class="game-stage-container">
         <div class="game-header-bar">
           <div class="game-meta-group">
-            <img src="../images/drive_mad_1786612101783.jpg" alt="Drive Mad Icon" class="game-icon-thumb"
-              id="active-game-icon">
+            <img src="../images/gunspin.png" alt="GunSpin Icon" class="game-icon-thumb" id="active-game-icon">
             <div class="game-title-details">
-              <h1 id="active-game-title">Drive Mad</h1>
+              <h1 id="active-game-title">GunSpin</h1>
               <div class="game-tags-list">
-                <span class="game-tag-pill" id="active-game-category">Physics Driving</span>
+                <span class="game-tag-pill" id="active-game-category">Physics Shooter</span>
                 <div class="game-rating-stars" id="active-game-rating">
                   <i class="fas fa-star"></i> 4.9
                 </div>
@@ -102,8 +101,8 @@
 
         <!-- Viewport Iframe Box -->
         <div class="game-viewport-box">
-          <iframe id="game-stage-iframe" loading="lazy" src="https://slope-game.github.io/drive-mad/" allowfullscreen
-            frameborder="0"></iframe>
+          <iframe id="game-stage-iframe" loading="lazy" src="https://swing-monkey.github.io/game-siwing-monkey/gunspin/"
+            allowfullscreen frameborder="0"></iframe>
         </div>
       </div>
 
@@ -115,25 +114,34 @@
 
         <div class="controls-grid" id="controls-grid-container">
           <div class="control-key-card">
-            <div class="key-badge"><i class="fas fa-arrow-right"></i></div>
+            <div class="key-badge"><i class="fas fa-mouse-pointer"></i></div>
             <div class="key-info">
-              <strong>W / Up / D</strong>
-              <span>Drive forward</span>
+              <strong>Left Click / Tap</strong>
+              <span>Fire weapon & generate recoil</span>
             </div>
           </div>
 
           <div class="control-key-card">
-            <div class="key-badge"><i class="fas fa-arrow-left"></i></div>
+            <div class="key-badge"><i class="fas fa-bullseye"></i></div>
             <div class="key-info">
-              <strong>S / Down / A</strong>
-              <span>Reverse / Lean back</span>
+              <strong>Timing & Angle</strong>
+              <span>Shoot backwards to propel forward</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-coins"></i></div>
+            <div class="key-info">
+              <strong>Upgrades</strong>
+              <span>Boost ammo, power & unlock guns</span>
             </div>
           </div>
         </div>
 
         <p class="game-description-text" id="active-game-description">
-          Drive Mad is an exciting physics truck driving game with 100+ creative levels. Balance your monster truck over
-          bridges, ramps, and flipping obstacles to reach the finish flag.
+          GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or
+          click to shoot at the right angle, pick up ammo bonuses, and travel as far as you can across challenging
+          terrains to unlock more powerful firearms!
         </p>
       </div>
 
@@ -201,6 +209,20 @@
           { icon: 'fas fa-arrows-alt', key: 'WASD / Arrow Keys', desc: 'Move your monkey around' },
           { icon: 'fas fa-shopping-basket', key: 'Auto Collect', desc: 'Stand near items to harvest/sell' },
           { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Spend cash to unlock new counters' }
+        ]
+      },
+      'gunspin': {
+        id: 'gunspin',
+        title: 'GunSpin',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/gunspin/',
+        icon: '../images/gunspin.png',
+        category: 'Physics Shooter',
+        rating: '4.9',
+        description: 'GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or click to shoot at the right angle, pick up ammo bonuses, and travel as far as you can across challenging terrains to unlock more powerful firearms!',
+        controls: [
+          { icon: 'fas fa-mouse-pointer', key: 'Left Click / Tap', desc: 'Fire weapon & generate recoil' },
+          { icon: 'fas fa-bullseye', key: 'Timing & Angle', desc: 'Shoot backwards to propel forward' },
+          { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Boost ammo, power & unlock guns' }
         ]
       },
       'money-movers-3': {
@@ -274,7 +296,7 @@
       'tunnel-rush': {
         id: 'tunnel-rush',
         title: 'Tunnel Rush',
-        url: 'https://slope-game.github.io/tunnel-rush/',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/tunnel-rush/',
         icon: '../images/tunnel_rush_1786612087485.jpg',
         category: 'Speed Arcade',
         rating: '4.8',
@@ -285,22 +307,23 @@
           { icon: 'fas fa-pause', key: 'Spacebar', desc: 'Pause game' }
         ]
       },
-      'drive-mad': {
-        id: 'drive-mad',
-        title: 'Drive Mad',
-        url: 'https://slope-game.github.io/drive-mad/',
-        icon: '../images/drive_mad_1786612101783.jpg',
-        category: 'Physics Driving',
+      'fnaf1': {
+        id: 'fnaf1',
+        title: 'FNAF 1',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/fnaf1/',
+        icon: '../images/fnaf1.png',
+        category: 'Horror',
         rating: '4.9',
-        description: 'Drive Mad is an exciting physics truck driving game with 100+ creative levels. Balance your monster truck over bridges, ramps, and flipping obstacles to reach the finish flag.',
+        description: 'Welcome to Freddy Fazbear\'s Pizza! As the night security guard, monitor surveillance cameras, check hallway lights, shut security doors, and conserve battery power to survive until 6:00 AM.',
         controls: [
-          { icon: 'fas fa-arrow-right', key: 'W / Up / D', desc: 'Drive forward' },
-          { icon: 'fas fa-arrow-left', key: 'S / Down / A', desc: 'Reverse / Lean back' }
+          { icon: 'fas fa-mouse-pointer', key: 'Mouse / Click', desc: 'Toggle door buttons & hallway lights' },
+          { icon: 'fas fa-video', key: 'Hover Bottom Bar', desc: 'Open / close camera monitor & switch views' },
+          { icon: 'fas fa-bolt', key: 'Power Management', desc: 'Conserve generator power to survive until 6 AM' }
         ]
       }
     };
 
-    let currentGameKey = 'drive-mad';
+    let currentGameKey = 'gunspin';
 
     function initGameRoom() {
       const gameData = GAMES_DB[currentGameKey];
@@ -339,22 +362,21 @@
       const sidebarContainer = document.getElementById('sidebar-games-container');
       if (!sidebarContainer) return;
 
-      sidebarContainer.innerHTML = Object.values(GAMES_DB).map(game => {
-        const isActive = game.id === currentGameKey ? 'active' : '';
-        return `
-          <a href="./${game.id}.html" class="sidebar-game-card ${isActive}">
+      sidebarContainer.innerHTML = Object.values(GAMES_DB)
+        .filter(game => game.id !== currentGameKey)
+        .map(game => `
+          <a href="./${game.id}.html" class="sidebar-game-card">
             <img src="${game.icon}" alt="${game.title}" class="sidebar-thumb">
             <div class="sidebar-game-info">
               <div class="sidebar-game-title">${game.title}</div>
               <div class="sidebar-game-meta">
                 <span class="rating"><i class="fas fa-star"></i> ${game.rating}</span>
-                <span>• ${game.category}</span>
+                <span>â€¢ ${game.category}</span>
               </div>
             </div>
             <div class="btn-play-mini"><i class="fas fa-play"></i></div>
           </a>
-        `;
-      }).join('');
+        `).join('');
     }
 
     function openFullscreen() {

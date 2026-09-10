@@ -202,6 +202,20 @@
           { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Spend cash to unlock new counters' }
         ]
       },
+      'gunspin': {
+        id: 'gunspin',
+        title: 'GunSpin',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/gunspin/',
+        icon: '../images/gunspin.png',
+        category: 'Physics Shooter',
+        rating: '4.9',
+        description: 'GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or click to shoot at the right angle, pick up ammo bonuses, and travel as far as you can across challenging terrains to unlock more powerful firearms!',
+        controls: [
+          { icon: 'fas fa-mouse-pointer', key: 'Left Click / Tap', desc: 'Fire weapon & generate recoil' },
+          { icon: 'fas fa-bullseye', key: 'Timing & Angle', desc: 'Shoot backwards to propel forward' },
+          { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Boost ammo, power & unlock guns' }
+        ]
+      },
       'money-movers-3': {
         id: 'money-movers-3',
         title: 'Money Movers 3',
@@ -273,7 +287,7 @@
       'tunnel-rush': {
         id: 'tunnel-rush',
         title: 'Tunnel Rush',
-        url: 'https://slope-game.github.io/tunnel-rush/',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/tunnel-rush/',
         icon: '../images/tunnel_rush_1786612087485.jpg',
         category: 'Speed Arcade',
         rating: '4.8',
@@ -284,17 +298,18 @@
           { icon: 'fas fa-pause', key: 'Spacebar', desc: 'Pause game' }
         ]
       },
-      'drive-mad': {
-        id: 'drive-mad',
-        title: 'Drive Mad',
-        url: 'https://slope-game.github.io/drive-mad/',
-        icon: '../images/drive_mad_1786612101783.jpg',
-        category: 'Physics Driving',
+      'fnaf1': {
+        id: 'fnaf1',
+        title: 'FNAF 1',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/fnaf1/',
+        icon: '../images/fnaf1.png',
+        category: 'Horror',
         rating: '4.9',
-        description: 'Drive Mad is an exciting physics truck driving game with 100+ creative levels. Balance your monster truck over bridges, ramps, and flipping obstacles to reach the finish flag.',
+        description: 'Welcome to Freddy Fazbear\'s Pizza! As the night security guard, monitor surveillance cameras, check hallway lights, shut security doors, and conserve battery power to survive until 6:00 AM.',
         controls: [
-          { icon: 'fas fa-arrow-right', key: 'W / Up / D', desc: 'Drive forward' },
-          { icon: 'fas fa-arrow-left', key: 'S / Down / A', desc: 'Reverse / Lean back' }
+          { icon: 'fas fa-mouse-pointer', key: 'Mouse / Click', desc: 'Toggle door buttons & hallway lights' },
+          { icon: 'fas fa-video', key: 'Hover Bottom Bar', desc: 'Open / close camera monitor & switch views' },
+          { icon: 'fas fa-bolt', key: 'Power Management', desc: 'Conserve generator power to survive until 6 AM' }
         ]
       }
     };
@@ -338,22 +353,21 @@
       const sidebarContainer = document.getElementById('sidebar-games-container');
       if (!sidebarContainer) return;
 
-      sidebarContainer.innerHTML = Object.values(GAMES_DB).map(game => {
-        const isActive = game.id === currentGameKey ? 'active' : '';
-        return `
-          <a href="./${game.id}.html" class="sidebar-game-card ${isActive}">
+      sidebarContainer.innerHTML = Object.values(GAMES_DB)
+        .filter(game => game.id !== currentGameKey)
+        .map(game => `
+          <a href="./${game.id}.html" class="sidebar-game-card">
             <img src="${game.icon}" alt="${game.title}" class="sidebar-thumb">
             <div class="sidebar-game-info">
               <div class="sidebar-game-title">${game.title}</div>
               <div class="sidebar-game-meta">
                 <span class="rating"><i class="fas fa-star"></i> ${game.rating}</span>
-                <span>• ${game.category}</span>
+                <span>â€¢ ${game.category}</span>
               </div>
             </div>
             <div class="btn-play-mini"><i class="fas fa-play"></i></div>
           </a>
-        `;
-      }).join('');
+        `).join('');
     }
 
     function openFullscreen() {

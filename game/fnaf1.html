@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>rope swing - Play Free Online Game | Swing Monkey Arcade</title>
+  <title>fnaf1 - Play Free Online Game | Swing Monkey Arcade</title>
   <meta name="description"
-    content="Play rope swing Online for free! Play as crewmate or impostor in a high-stakes survival mission on the spaceship.">
-  <meta name="title" content="rope swing - Free Online Action Survival Game" />
+    content="Play fnaf1 (Five Nights at Freddy's 1) online for free! Survive 5 nights as a security guard at Freddy Fazbear's Pizza. Monitor surveillance cameras, manage power, and evade animatronics until 6 AM.">
+  <meta name="title" content="fnaf1 - Free Online Horror Game" />
 
   <!-- Fonts & Styles -->
   <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
@@ -55,9 +55,9 @@
     <nav class="breadcrumb-bar">
       <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
       <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-      <a href="../index.html#more-games">Action</a>
+      <a href="../index.html#more-games">Horror</a>
       <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-      <span class="breadcrumb-current" id="breadcrumb-title">rope swing</span>
+      <span class="breadcrumb-current" id="breadcrumb-title">FNAF 1</span>
     </nav>
 
     <!-- Primary Game Arena Column -->
@@ -67,12 +67,11 @@
       <div class="game-stage-container">
         <div class="game-header-bar">
           <div class="game-meta-group">
-            <img src="../images/rope_swing_1786610813126.jpg" alt="rope swing Icon" class="game-icon-thumb"
-              id="active-game-icon">
+            <img src="../images/fnaf1.png" alt="fnaf1 Icon" class="game-icon-thumb" id="active-game-icon">
             <div class="game-title-details">
-              <h1 id="active-game-title">rope swing</h1>
+              <h1 id="active-game-title">FNAF 1</h1>
               <div class="game-tags-list">
-                <span class="game-tag-pill" id="active-game-category">Action</span>
+                <span class="game-tag-pill" id="active-game-category">Horror</span>
                 <div class="game-rating-stars" id="active-game-rating">
                   <i class="fas fa-star"></i> 4.9
                 </div>
@@ -102,9 +101,8 @@
 
         <!-- Viewport Iframe Box -->
         <div class="game-viewport-box">
-          <iframe id="game-stage-iframe" loading="lazy"
-            src="https://swing-monkey.github.io/game-siwing-monkey/rope-swing/" allowfullscreen
-            frameborder="0"></iframe>
+          <iframe id="game-stage-iframe" loading="lazy" src="https://swing-monkey.github.io/game-siwing-monkey/fnaf1/"
+            allowfullscreen frameborder="0"></iframe>
         </div>
       </div>
 
@@ -116,33 +114,36 @@
 
         <div class="controls-grid" id="controls-grid-container">
           <div class="control-key-card">
-            <div class="key-badge"><i class="fas fa-arrows-alt"></i></div>
+            <div class="key-badge"><i class="fas fa-mouse-pointer"></i></div>
             <div class="key-info">
-              <strong>WASD / Joystick</strong>
-              <span>Move character</span>
+              <strong>Mouse / Left Click</strong>
+              <span>Toggle security door buttons & hallway lights</span>
             </div>
           </div>
 
           <div class="control-key-card">
-            <div class="key-badge"><i class="fas fa-wrench"></i></div>
+            <div class="key-badge"><i class="fas fa-video"></i></div>
             <div class="key-info">
-              <strong>E / Click</strong>
-              <span>Interact with tasks</span>
+              <strong>Hover Bottom Screen</strong>
+              <span>Flip up surveillance camera monitor & switch rooms</span>
             </div>
           </div>
 
           <div class="control-key-card">
-            <div class="key-badge"><i class="fas fa-skull"></i></div>
+            <div class="key-badge"><i class="fas fa-bolt"></i></div>
             <div class="key-info">
-              <strong>Q / Kill Button</strong>
-              <span>Impostor eliminate crewmate</span>
+              <strong>Power Management</strong>
+              <span>Conserve limited battery power to survive until 6:00 AM</span>
             </div>
           </div>
         </div>
 
         <p class="game-description-text" id="active-game-description">
-          rope swing Online allows you to play crewmates or impostors in a high-stakes survival mission. Complete tasks
-          around the spaceship or sabotage your enemies without getting caught!
+          Welcome to your new summer job at Freddy Fazbear's Pizza! As the night security guard, your objective is to
+          monitor the cameras and ensure safety from 12:00 AM to 6:00 AM. Watch out for animatronics Freddy, Bonnie,
+          Chica, and Foxy wandering through the dark pizzeria. Manage your limited power supply wisely: shutting doors
+          and keeping hallway lights on will drain your generator fast. If power goes out, Freddy strikes! Can you
+          survive all five nights?
         </p>
       </div>
 
@@ -212,18 +213,18 @@
           { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Spend cash to unlock new counters' }
         ]
       },
-      'among-us': {
-        id: 'among-us',
-        title: 'rope swing',
-        url: 'https://swing-monkey.github.io/game-siwing-monkey/rope-swing/',
-        icon: '../images/rope_swing_1786610813126.jpg',
-        category: 'Action',
+      'gunspin': {
+        id: 'gunspin',
+        title: 'GunSpin',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/gunspin/',
+        icon: '../images/gunspin.png',
+        category: 'Physics Shooter',
         rating: '4.9',
-        description: 'rope swing Online allows you to play crewmates or impostors in a high-stakes survival mission. Complete tasks around the spaceship or sabotage your enemies without getting caught!',
+        description: 'GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or click to shoot at the right angle, pick up ammo bonuses, and travel as far as you can across challenging terrains to unlock more powerful firearms!',
         controls: [
-          { icon: 'fas fa-arrows-alt', key: 'WASD / Joystick', desc: 'Move character' },
-          { icon: 'fas fa-wrench', key: 'E / Click', desc: 'Interact with tasks' },
-          { icon: 'fas fa-skull', key: 'Q / Kill Button', desc: 'Impostor eliminate crewmate' }
+          { icon: 'fas fa-mouse-pointer', key: 'Left Click / Tap', desc: 'Fire weapon & generate recoil' },
+          { icon: 'fas fa-bullseye', key: 'Timing & Angle', desc: 'Shoot backwards to propel forward' },
+          { icon: 'fas fa-coins', key: 'Upgrades', desc: 'Boost ammo, power & unlock guns' }
         ]
       },
       'money-movers-3': {
@@ -297,7 +298,7 @@
       'tunnel-rush': {
         id: 'tunnel-rush',
         title: 'Tunnel Rush',
-        url: 'https://slope-game.github.io/tunnel-rush/',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/tunnel-rush/',
         icon: '../images/tunnel_rush_1786612087485.jpg',
         category: 'Speed Arcade',
         rating: '4.8',
@@ -308,22 +309,23 @@
           { icon: 'fas fa-pause', key: 'Spacebar', desc: 'Pause game' }
         ]
       },
-      'drive-mad': {
-        id: 'drive-mad',
-        title: 'Drive Mad',
-        url: 'https://slope-game.github.io/drive-mad/',
-        icon: '../images/drive_mad_1786612101783.jpg',
-        category: 'Physics Driving',
+      'fnaf1': {
+        id: 'fnaf1',
+        title: 'FNAF 1',
+        url: 'https://swing-monkey.github.io/game-siwing-monkey/fnaf1/',
+        icon: '../images/fnaf1.png',
+        category: 'Horror',
         rating: '4.9',
-        description: 'Drive Mad is an exciting physics truck driving game with 100+ creative levels. Balance your monster truck over bridges, ramps, and flipping obstacles to reach the finish flag.',
+        description: 'Welcome to Freddy Fazbear\'s Pizza! As the night security guard, monitor surveillance cameras, check hallway lights, shut security doors, and conserve battery power to survive until 6:00 AM.',
         controls: [
-          { icon: 'fas fa-arrow-right', key: 'W / Up / D', desc: 'Drive forward' },
-          { icon: 'fas fa-arrow-left', key: 'S / Down / A', desc: 'Reverse / Lean back' }
+          { icon: 'fas fa-mouse-pointer', key: 'Mouse / Click', desc: 'Toggle door buttons & hallway lights' },
+          { icon: 'fas fa-video', key: 'Hover Bottom Bar', desc: 'Open / close camera monitor & switch views' },
+          { icon: 'fas fa-bolt', key: 'Power Management', desc: 'Conserve generator power to survive until 6 AM' }
         ]
       }
     };
 
-    let currentGameKey = 'among-us';
+    let currentGameKey = 'fnaf1';
 
     function initGameRoom() {
       const gameData = GAMES_DB[currentGameKey];
@@ -362,22 +364,21 @@
       const sidebarContainer = document.getElementById('sidebar-games-container');
       if (!sidebarContainer) return;
 
-      sidebarContainer.innerHTML = Object.values(GAMES_DB).map(game => {
-        const isActive = game.id === currentGameKey ? 'active' : '';
-        return `
-          <a href="./${game.id}.html" class="sidebar-game-card ${isActive}">
+      sidebarContainer.innerHTML = Object.values(GAMES_DB)
+        .filter(game => game.id !== currentGameKey)
+        .map(game => `
+          <a href="./${game.id}.html" class="sidebar-game-card">
             <img src="${game.icon}" alt="${game.title}" class="sidebar-thumb">
             <div class="sidebar-game-info">
               <div class="sidebar-game-title">${game.title}</div>
               <div class="sidebar-game-meta">
                 <span class="rating"><i class="fas fa-star"></i> ${game.rating}</span>
-                <span>• ${game.category}</span>
+                <span>â€¢ ${game.category}</span>
               </div>
             </div>
             <div class="btn-play-mini"><i class="fas fa-play"></i></div>
           </a>
-        `;
-      }).join('');
+        `).join('');
     }
 
     function openFullscreen() {

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GunSpin - Play Free Online Game | Swing Monkey Arcade</title>
+  <meta name="description"
+    content="GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or click to shoot at the right angle, pick up ammo bonuses, and unlock powerful firearms!">
+  <meta name="title" content="GunSpin - Free Online Shooting Game" />
+
+  <!-- Fonts & Styles -->
+  <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/modern.css" />
+  <link rel="stylesheet" type="text/css" href="../css/play.css" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964980751221225"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TGXVPXYKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7TGXVPXYKT');
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-logo" href="../index.html" id="brand-home-link">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="nav-link" href="../action.html"><i class="fas fa-fist-raised"></i> Action</a></li>
+        <li><a class="nav-link" href="../cars.html"><i class="fas fa-car"></i> Cars</a></li>
+        <li><a class="nav-link" href="../puzzle.html"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
+        <li><a class="nav-link active-nav-link" href="../shooting.html"><i class="fas fa-crosshairs"></i> Shooting</a></li>
+        <li><a class="nav-link" href="../sports.html"><i class="fas fa-futbol"></i> Sports Games</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Game Room Main Container -->
+  <main class="game-room-container">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar">
+      <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="../shooting.html">Shooting</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="breadcrumb-current" id="breadcrumb-title">GunSpin</span>
+    </nav>
+
+    <!-- Primary Game Arena Column -->
+    <section class="game-arena-column">
+
+      <!-- Main Stage Container -->
+      <div class="game-stage-container">
+        <div class="game-header-bar">
+          <div class="game-meta-group">
+            <img src="/images/gunspin.png" alt="GunSpin Icon" class="game-icon-thumb" id="active-game-icon">
+            <div class="game-title-details">
+              <h1 id="active-game-title">GunSpin</h1>
+              <div class="game-tags-list">
+                <span class="game-tag-pill" id="active-game-category">Physics Distance Shooter</span>
+                <div class="game-rating-stars" id="active-game-rating">
+                  <i class="fas fa-star"></i> 4.9
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="game-controls-toolbar">
+            <button class="btn-ctrl" onclick="reloadActiveGame()" title="Restart Game">
+              <i class="fal fa-sync"></i> <span>Restart</span>
+            </button>
+            <button class="btn-ctrl" id="theater-btn" onclick="toggleTheaterMode()" title="Theater Mode">
+              <i class="fal fa-compress-wide"></i> <span>Theater</span>
+            </button>
+            <button class="btn-ctrl" onclick="openFullscreen()" title="Fullscreen Mode">
+              <i class="fal fa-expand-arrows"></i> <span>Fullscreen</span>
+            </button>
+            <button class="btn-ctrl btn-favorite" id="fav-btn" onclick="toggleFavorite()" title="Favorite Game">
+              <i class="fal fa-heart"></i>
+            </button>
+            <button class="btn-ctrl" onclick="shareGame()" title="Share Link">
+              <i class="fal fa-share-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Viewport Iframe Box -->
+        <div class="game-viewport-box">
+          <iframe id="game-stage-iframe" loading="lazy" src="https://swing-monkey.github.io/game-siwing-monkey/gunspin/"
+            allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- Quick Control Instructions & Overview -->
+      <div class="game-instructions-card">
+        <h2 class="card-title-heading">
+          <i class="fas fa-gamepad"></i> Controls & How to Play
+        </h2>
+
+        <div class="controls-grid" id="controls-grid-container">
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-mouse-pointer"></i></div>
+            <div class="key-info">
+              <strong>Left Click / Tap</strong>
+              <span>Fire weapon & generate recoil</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-bullseye"></i></div>
+            <div class="key-info">
+              <strong>Timing & Angle</strong>
+              <span>Shoot backwards to propel forward</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-coins"></i></div>
+            <div class="key-info">
+              <strong>Upgrades</strong>
+              <span>Boost ammo, power & unlock guns</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="game-description-text" id="active-game-description">
+          GunSpin is an addictive physics-based distance game where you use recoil to propel your weapon forward. Tap or click to shoot at the right angle, pick up ammo bonuses, and unlock powerful firearms!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Sidebar Column: Smiler Games Picker -->
+    <aside class="sidebar-column">
+      <div class="sidebar-box">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-fire"></i> Smiler Games</h2>
+          <a href="../shooting.html"
+            style="font-size: 0.82rem; color: var(--accent-green); font-weight: 600;">View All</a>
+        </div>
+
+        <div class="sidebar-games-list" id="sidebar-games-container">
+          <a href="./airport-clash-3d.html" class="sidebar-game-card">
+            <img src="/images/airport-clash-3d.png" alt="Airport Clash 3D" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Airport Clash 3D</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; 3D Multiplayer Shooter</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./apple-shooter-champ.html" class="sidebar-game-card">
+            <img src="/images/apple-shooter-champ.png" alt="Apple Shooter Champ" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Apple Shooter Champ</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                <span>&bull; Archery Physics</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./armedforces.html" class="sidebar-game-card">
+            <img src="/images/armedforces.png" alt="ArmedForces.io" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">ArmedForces.io</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Tactical FPS</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./cat-gunner.html" class="sidebar-game-card">
+            <img src="/images/cat-gunner.png" alt="Cat Gunner" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Cat Gunner</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; 2D Action Shooter</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fire-free.html" class="sidebar-game-card">
+            <img src="/images/fire-free.png" alt="Fire Free" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fire Free</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Battle Royale Survival</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fnaf-shooter.html" class="sidebar-game-card">
+            <img src="/images/fnaf-shooter.png" alt="FNAF Shooter" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">FNAF Shooter</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Survival Horror Shooter</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fps-assault-shooter.html" class="sidebar-game-card">
+            <img src="/images/fps-assault-shooter.png" alt="FPS Assault Shooter" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">FPS Assault Shooter</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Tactical FPS</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fps-io.html" class="sidebar-game-card">
+            <img src="/images/fps-io.png" alt="FPS.io" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">FPS.io</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Multiplayer Arena Shooter</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./funny-battle.html" class="sidebar-game-card">
+            <img src="/images/funny-battle.png" alt="Funny Battle Simulator" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Funny Battle Simulator</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Physics Battle Simulator</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a class="brand-logo" href="../index.html">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+      <p>&copy; Swing Monkey Arcade. Play free online action, shooting and arcade games.</p>
+      <ul class="footer-links">
+        <li><a href="../about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+        <li><a href="../dmca.html"><i class="fas fa-copyright"></i> DMCA Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Script for Game Room State & Data -->
+  <script>
+    const currentGameKey = 'gunspin';
+
+    function openFullscreen() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (!iframe) return;
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+
+    function reloadActiveGame() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
+    }
+
+    function toggleTheaterMode() {
+      document.body.classList.toggle('theater-mode');
+      const btn = document.getElementById('theater-btn');
+      if (btn) {
+        btn.classList.toggle('active');
+      }
+    }
+
+    function toggleFavorite() {
+      const favBtn = document.getElementById('fav-btn');
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+
+      if (favs.includes(currentGameKey)) {
+        favs = favs.filter(k => k !== currentGameKey);
+        favBtn.classList.remove('active');
+        favBtn.innerHTML = '<i class="fal fa-heart"></i>';
+      } else {
+        favs.push(currentGameKey);
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+      localStorage.setItem('swing_monkey_favs', JSON.stringify(favs));
+    }
+
+    function checkFavoriteStatus() {
+      const favBtn = document.getElementById('fav-btn');
+      if (!favBtn) return;
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+      if (favs.includes(currentGameKey)) {
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+    }
+
+    function shareGame() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Game link copied to clipboard!');
+        });
+      } else {
+        alert(window.location.href);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkFavoriteStatus);
+  </script>
+</body>
+
+</html>

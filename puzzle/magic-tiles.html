@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Tiles - Play Free Online Game | Swing Monkey Arcade</title>
+  <meta name="description"
+    content="Magic Tiles tests your finger dexterity and musical timing. Tap falling black piano keys to harmonious classical and modern melodies while avoiding blank tiles!">
+  <meta name="title" content="Magic Tiles - Free Online Puzzle Game" />
+
+  <!-- Fonts & Styles -->
+  <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/modern.css" />
+  <link rel="stylesheet" type="text/css" href="../css/play.css" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964980751221225"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TGXVPXYKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7TGXVPXYKT');
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-logo" href="../index.html" id="brand-home-link">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="nav-link" href="../action.html"><i class="fas fa-fist-raised"></i> Action</a></li>
+        <li><a class="nav-link" href="../cars.html"><i class="fas fa-car"></i> Cars</a></li>
+        <li><a class="nav-link active-nav-link" href="../puzzle.html"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
+        <li><a class="nav-link" href="../shooting.html"><i class="fas fa-crosshairs"></i> Shooting</a></li>
+        <li><a class="nav-link" href="../sports.html"><i class="fas fa-futbol"></i> Sports Games</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Game Room Main Container -->
+  <main class="game-room-container">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar">
+      <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="../puzzle.html">Puzzle</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="breadcrumb-current" id="breadcrumb-title">Magic Tiles</span>
+    </nav>
+
+    <!-- Primary Game Arena Column -->
+    <section class="game-arena-column">
+
+      <!-- Main Stage Container -->
+      <div class="game-stage-container">
+        <div class="game-header-bar">
+          <div class="game-meta-group">
+            <img src="/images/magic-tiles.png" alt="Magic Tiles Icon" class="game-icon-thumb" id="active-game-icon">
+            <div class="game-title-details">
+              <h1 id="active-game-title">Magic Tiles</h1>
+              <div class="game-tags-list">
+                <span class="game-tag-pill" id="active-game-category">Rhythm Music Puzzle</span>
+                <div class="game-rating-stars" id="active-game-rating">
+                  <i class="fas fa-star"></i> 4.9
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="game-controls-toolbar">
+            <button class="btn-ctrl" onclick="reloadActiveGame()" title="Restart Game">
+              <i class="fal fa-sync"></i> <span>Restart</span>
+            </button>
+            <button class="btn-ctrl" id="theater-btn" onclick="toggleTheaterMode()" title="Theater Mode">
+              <i class="fal fa-compress-wide"></i> <span>Theater</span>
+            </button>
+            <button class="btn-ctrl" onclick="openFullscreen()" title="Fullscreen Mode">
+              <i class="fal fa-expand-arrows"></i> <span>Fullscreen</span>
+            </button>
+            <button class="btn-ctrl btn-favorite" id="fav-btn" onclick="toggleFavorite()" title="Favorite Game">
+              <i class="fal fa-heart"></i>
+            </button>
+            <button class="btn-ctrl" onclick="shareGame()" title="Share Link">
+              <i class="fal fa-share-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Viewport Iframe Box -->
+        <div class="game-viewport-box">
+          <iframe id="game-stage-iframe" loading="lazy" src="https://swing-monkey.github.io/game-siwing-monkey/magic-tiles/"
+            allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- Quick Control Instructions & Overview -->
+      <div class="game-instructions-card">
+        <h2 class="card-title-heading">
+          <i class="fas fa-gamepad"></i> Controls & How to Play
+        </h2>
+
+        <div class="controls-grid" id="controls-grid-container">
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-music"></i></div>
+            <div class="key-info">
+              <strong>Click / Tap / Keys</strong>
+              <span>Tap falling black piano keys</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-hand-holding"></i></div>
+            <div class="key-info">
+              <strong>Sustain Notes</strong>
+              <span>Hold down long melody bars</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="key-info">
+              <strong>Tempo Acceleration</strong>
+              <span>Keep rhythm as tempo speeds up</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="game-description-text" id="active-game-description">
+          Magic Tiles tests your finger dexterity and musical timing. Tap falling black piano keys to harmonious classical and modern melodies while avoiding blank tiles!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Sidebar Column: Smiler Games Picker -->
+    <aside class="sidebar-column">
+      <div class="sidebar-box">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-fire"></i> Smiler Games</h2>
+          <a href="../puzzle.html"
+            style="font-size: 0.82rem; color: var(--accent-green); font-weight: 600;">View All</a>
+        </div>
+
+        <div class="sidebar-games-list" id="sidebar-games-container">
+          <a href="./block-toggle.html" class="sidebar-game-card">
+            <img src="/images/block-toggle.png" alt="Block Toggle" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Block Toggle</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Puzzle Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./cats.html" class="sidebar-game-card">
+            <img src="/images/cats.png" alt="Cats: Crash Arena" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Cats: Crash Arena</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Battle Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./cooking-tile.html" class="sidebar-game-card">
+            <img src="/images/cooking-tile.png" alt="Cooking Tile" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Cooking Tile</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Match 3 Tile</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fill-the-battery.html" class="sidebar-game-card">
+            <img src="/images/fill-the-battery.png" alt="Fill The Battery" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fill The Battery</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                <span>&bull; Logic Wire Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fish-eat.html" class="sidebar-game-card">
+            <img src="/images/fish-eat.png" alt="Fish Eat Fish" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fish Eat Fish</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Aquatic Growth Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./jewel-shuffle.html" class="sidebar-game-card">
+            <img src="/images/jewel-shuffle.png" alt="Jewel Shuffle" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Jewel Shuffle</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Match 3 Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./jungle-friends.html" class="sidebar-game-card">
+            <img src="/images/jungle-friends.png" alt="Jungle Friends" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Jungle Friends</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Idle Management Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./mad-dentist-2.html" class="sidebar-game-card">
+            <img src="/images/mad-dentist-2.png" alt="Mad Dentist 2" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Mad Dentist 2</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                <span>&bull; Simulation Puzzle</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./mahjong-quest.html" class="sidebar-game-card">
+            <img src="/images/mahjong-quest.png" alt="Mahjong Quest" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Mahjong Quest</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Tile Solitaire</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a class="brand-logo" href="../index.html">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+      <p>&copy; Swing Monkey Arcade. Play free online physics and arcade games.</p>
+      <ul class="footer-links">
+        <li><a href="../about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+        <li><a href="../dmca.html"><i class="fas fa-copyright"></i> DMCA Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Script for Game Room State & Data -->
+  <script>
+    const currentGameKey = 'magic-tiles';
+
+    function openFullscreen() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (!iframe) return;
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+
+    function reloadActiveGame() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
+    }
+
+    function toggleTheaterMode() {
+      document.body.classList.toggle('theater-mode');
+      const btn = document.getElementById('theater-btn');
+      if (btn) {
+        btn.classList.toggle('active');
+      }
+    }
+
+    function toggleFavorite() {
+      const favBtn = document.getElementById('fav-btn');
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+
+      if (favs.includes(currentGameKey)) {
+        favs = favs.filter(k => k !== currentGameKey);
+        favBtn.classList.remove('active');
+        favBtn.innerHTML = '<i class="fal fa-heart"></i>';
+      } else {
+        favs.push(currentGameKey);
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+      localStorage.setItem('swing_monkey_favs', JSON.stringify(favs));
+    }
+
+    function checkFavoriteStatus() {
+      const favBtn = document.getElementById('fav-btn');
+      if (!favBtn) return;
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+      if (favs.includes(currentGameKey)) {
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+    }
+
+    function shareGame() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Game link copied to clipboard!');
+        });
+      } else {
+        alert(window.location.href);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkFavoriteStatus);
+  </script>
+</body>
+
+</html>

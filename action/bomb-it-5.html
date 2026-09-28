@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomb It 5 - Play Free Online Game | Swing Monkey Arcade</title>
+  <meta name="description"
+    content="Bomb It 5 brings vibrant arcade combat with new vehicles, outfits, and arenas. Blast open crates, grab mystery upgrades, and eliminate enemy bombers across multiple modes!">
+  <meta name="title" content="Bomb It 5 - Free Online Action Game" />
+
+  <!-- Fonts & Styles -->
+  <link href="../css/font-awesome.pro.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../css/modern.css" />
+  <link rel="stylesheet" type="text/css" href="../css/play.css" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3964980751221225"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TGXVPXYKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7TGXVPXYKT');
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-logo" href="../index.html" id="brand-home-link">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="nav-link active-nav-link" href="../action.html"><i class="fas fa-fist-raised"></i> Action</a></li>
+        <li><a class="nav-link" href="../cars.html"><i class="fas fa-car"></i> Cars</a></li>
+        <li><a class="nav-link" href="../puzzle.html"><i class="fas fa-puzzle-piece"></i> Puzzle</a></li>
+        <li><a class="nav-link" href="../shooting.html"><i class="fas fa-crosshairs"></i> Shooting</a></li>
+        <li><a class="nav-link" href="../sports.html"><i class="fas fa-futbol"></i> Sports Games</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Game Room Main Container -->
+  <main class="game-room-container">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-bar">
+      <a href="../index.html"><i class="fas fa-home"></i> Swing Monkey</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <a href="../action.html">Action</a>
+      <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+      <span class="breadcrumb-current" id="breadcrumb-title">Bomb It 5</span>
+    </nav>
+
+    <!-- Primary Game Arena Column -->
+    <section class="game-arena-column">
+
+      <!-- Main Stage Container -->
+      <div class="game-stage-container">
+        <div class="game-header-bar">
+          <div class="game-meta-group">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/bomb-it-5/logo.png" alt="Bomb It 5 Icon" class="game-icon-thumb" id="active-game-icon">
+            <div class="game-title-details">
+              <h1 id="active-game-title">Bomb It 5</h1>
+              <div class="game-tags-list">
+                <span class="game-tag-pill" id="active-game-category">Arcade Bomber</span>
+                <div class="game-rating-stars" id="active-game-rating">
+                  <i class="fas fa-star"></i> 4.8
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="game-controls-toolbar">
+            <button class="btn-ctrl" onclick="reloadActiveGame()" title="Restart Game">
+              <i class="fal fa-sync"></i> <span>Restart</span>
+            </button>
+            <button class="btn-ctrl" id="theater-btn" onclick="toggleTheaterMode()" title="Theater Mode">
+              <i class="fal fa-compress-wide"></i> <span>Theater</span>
+            </button>
+            <button class="btn-ctrl" onclick="openFullscreen()" title="Fullscreen Mode">
+              <i class="fal fa-expand-arrows"></i> <span>Fullscreen</span>
+            </button>
+            <button class="btn-ctrl btn-favorite" id="fav-btn" onclick="toggleFavorite()" title="Favorite Game">
+              <i class="fal fa-heart"></i>
+            </button>
+            <button class="btn-ctrl" onclick="shareGame()" title="Share Link">
+              <i class="fal fa-share-alt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Viewport Iframe Box -->
+        <div class="game-viewport-box">
+          <iframe id="game-stage-iframe" loading="lazy" src="https://swing-monkey.github.io/game-siwing-monkey/bomb-it-5/"
+            allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- Quick Control Instructions & Overview -->
+      <div class="game-instructions-card">
+        <h2 class="card-title-heading">
+          <i class="fas fa-gamepad"></i> Controls & How to Play
+        </h2>
+
+        <div class="controls-grid" id="controls-grid-container">
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-arrows-alt"></i></div>
+            <div class="key-info">
+              <strong>Arrow Keys / WASD</strong>
+              <span>Navigate arena paths</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-bomb"></i></div>
+            <div class="key-info">
+              <strong>Spacebar</strong>
+              <span>Place bomb / Fire weapon</span>
+            </div>
+          </div>
+
+          <div class="control-key-card">
+            <div class="key-badge"><i class="fas fa-car"></i></div>
+            <div class="key-info">
+              <strong>Vehicles</strong>
+              <span>Mount hovercrafts & push carts</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="game-description-text" id="active-game-description">
+          Bomb It 5 brings vibrant arcade combat with new vehicles, outfits, and arenas. Blast open crates, grab mystery upgrades, and eliminate enemy bombers across multiple modes!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Sidebar Column: Smiler Games Picker -->
+    <aside class="sidebar-column">
+      <div class="sidebar-box">
+        <div class="sidebar-header">
+          <h2><i class="fas fa-fire"></i> Smiler Games</h2>
+          <a href="../action.html"
+            style="font-size: 0.82rem; color: var(--accent-green); font-weight: 600;">View All</a>
+        </div>
+
+        <div class="sidebar-games-list" id="sidebar-games-container">
+          <a href="./bomb-it-4.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/bomb-it-4/logo.png" alt="Bomb It 4" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Bomb It 4</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                <span>&bull; Arcade Bomber</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./bomb-it-6.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/bomb-it-6/logo.png" alt="Bomb It 6" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Bomb It 6</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Arcade Bomber</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./bomb-it-7.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/bomb-it-7/logo.png" alt="Bomb It 7" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Bomb It 7</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Arcade Bomber</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-and-watergirl-1-forest-temple.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-and-watergirl-1-forest-temple/logo.png" alt="Fireboy and Watergirl 1: Forest Temple" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 1: Forest Temple</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-water-2.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-water-2/logo.png" alt="Fireboy and Watergirl 2: Light Temple" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 2: Light Temple</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-water-3.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-water-3/logo.png" alt="Fireboy and Watergirl 3: Ice Temple" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 3: Ice Temple</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-water-4.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-water-4/logo.png" alt="Fireboy and Watergirl 4: Crystal Temple" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 4: Crystal Temple</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-water-5.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-water-5/logo.png" alt="Fireboy and Watergirl 5: Elements" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 5: Elements</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+          <a href="./fireboy-water-6.html" class="sidebar-game-card">
+            <img src="https://swing-monkey.github.io/game-siwing-monkey/fireboy-water-6/logo.png" alt="Fireboy and Watergirl 6: Fairy Tales" class="sidebar-thumb">
+            <div class="sidebar-game-info">
+              <div class="sidebar-game-title">Fireboy and Watergirl 6: Fairy Tales</div>
+              <div class="sidebar-game-meta">
+                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                <span>&bull; Co-op Platformer</span>
+              </div>
+            </div>
+            <div class="btn-play-mini"><i class="fas fa-play"></i></div>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a class="brand-logo" href="../index.html">
+        <img src="../images/swing-monkey.png" alt="Swing Monkey Logo">
+        <span>Swing<span class="brand-tag">Monkey</span></span>
+      </a>
+      <p>&copy; Swing Monkey Arcade. Play free online physics and arcade games.</p>
+      <ul class="footer-links">
+        <li><a href="../about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="../privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+        <li><a href="../terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+        <li><a href="../dmca.html"><i class="fas fa-copyright"></i> DMCA Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Script for Game Room State & Data -->
+  <script>
+    const currentGameKey = 'bomb-it-5';
+
+    function openFullscreen() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (!iframe) return;
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+    }
+
+    function reloadActiveGame() {
+      const iframe = document.getElementById('game-stage-iframe');
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
+    }
+
+    function toggleTheaterMode() {
+      document.body.classList.toggle('theater-mode');
+      const btn = document.getElementById('theater-btn');
+      if (btn) {
+        btn.classList.toggle('active');
+      }
+    }
+
+    function toggleFavorite() {
+      const favBtn = document.getElementById('fav-btn');
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+
+      if (favs.includes(currentGameKey)) {
+        favs = favs.filter(k => k !== currentGameKey);
+        favBtn.classList.remove('active');
+        favBtn.innerHTML = '<i class="fal fa-heart"></i>';
+      } else {
+        favs.push(currentGameKey);
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+      localStorage.setItem('swing_monkey_favs', JSON.stringify(favs));
+    }
+
+    function checkFavoriteStatus() {
+      const favBtn = document.getElementById('fav-btn');
+      if (!favBtn) return;
+      let favs = JSON.parse(localStorage.getItem('swing_monkey_favs') || '[]');
+      if (favs.includes(currentGameKey)) {
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<i class="fas fa-heart" style="color: #f59e0b;"></i>';
+      }
+    }
+
+    function shareGame() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Game link copied to clipboard!');
+        });
+      } else {
+        alert(window.location.href);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkFavoriteStatus);
+  </script>
+</body>
+
+</html>
+

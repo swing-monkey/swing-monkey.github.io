@@ -607,17 +607,42 @@ a {
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 24px;
   list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
 }
 
 .footer-links a {
   color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.footer-links a i {
+  font-size: 0.85rem;
+  color: var(--accent-green);
   transition: var(--transition);
 }
 
 .footer-links a:hover {
-  color: var(--accent-green);
+  color: #ffffff;
+  background: rgba(16, 185, 129, 0.12);
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.footer-links a:hover i {
+  transform: scale(1.15);
+  color: var(--accent-cyan);
 }
 
 /* Responsive adjustments */

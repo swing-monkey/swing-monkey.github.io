@@ -831,6 +831,27 @@ a {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
+.image-showcase-ad-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+  min-height: 340px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-showcase-ad-card:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 .image-showcase-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -938,3 +959,587 @@ a {
   color: var(--accent-green);
   font-weight: 600;
 }
+
+/* ============================================================
+   Top Leaderboard Ad Banner (728x90)
+   ============================================================ */
+.site-ad-banner-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 16px 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.ad-leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.ad-caption {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.ad-caption i {
+  color: var(--accent-green);
+  font-size: 0.8rem;
+}
+
+.ad-slot-728x90 {
+  width: 728px;
+  max-width: 100%;
+  height: 90px;
+  min-height: 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(19, 27, 46, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ad-slot-728x90:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 24px -2px rgba(16, 185, 129, 0.15);
+}
+
+.ad-placeholder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.ad-placeholder-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.ad-placeholder-icon {
+  font-size: 1.35rem;
+  color: var(--accent-green);
+  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
+}
+
+.ad-placeholder-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.ad-placeholder-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.ad-placeholder-size {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.ad-slot-728x90 ins.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.ad-slot-728x90 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-content,
+.ad-slot-728x90 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-content {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .site-ad-banner-top {
+    padding: 12px 12px 6px;
+  }
+  
+  .ad-slot-728x90 {
+    width: 100%;
+    max-width: 100%;
+    height: 90px;
+    min-height: 90px;
+  }
+
+  .ad-placeholder-content {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .ad-placeholder-badge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ad-placeholder-icon {
+    font-size: 1.1rem;
+  }
+
+  .ad-placeholder-title {
+    font-size: 0.78rem;
+  }
+
+  .ad-placeholder-size {
+    font-size: 0.68rem;
+  }
+}
+
+/* ============================================================
+   Floating Skyscraper Side Ads (160x600)
+   ============================================================ */
+.side-ad-rail {
+  position: fixed;
+  top: 96px;
+  width: 160px;
+  height: 600px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-ad-left {
+  right: calc(50% + 655px);
+}
+
+.side-ad-right {
+  left: calc(50% + 655px);
+}
+
+/* For play pages with wider 1400px container */
+body:has(.game-room-container) .side-ad-left {
+  right: calc(50% + 715px);
+}
+
+body:has(.game-room-container) .side-ad-right {
+  left: calc(50% + 715px);
+}
+
+.side-ad-caption {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+
+.side-ad-caption i {
+  color: var(--accent-green);
+  font-size: 0.75rem;
+}
+
+.ad-slot-160x600 {
+  width: 160px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(19, 27, 46, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ad-slot-160x600:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 35px rgba(16, 185, 129, 0.15);
+}
+
+.side-ad-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+}
+
+.side-ad-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--accent-green);
+  font-size: 1.4rem;
+  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
+}
+
+.side-ad-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.side-ad-dim {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.ad-slot-160x600 ins.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.ad-slot-160x600 ins.adsbygoogle[data-ad-status="filled"] ~ .side-ad-placeholder,
+.ad-slot-160x600 ins.adsbygoogle:has(iframe) ~ .side-ad-placeholder {
+  display: none !important;
+}
+
+/* Hide on screens where side rails would overlap main content */
+@media (max-width: 1650px) {
+  .side-ad-rail {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1780px) {
+  body:has(.game-room-container) .side-ad-rail {
+    display: none !important;
+  }
+}
+
+/* Hide on very short viewports to prevent vertical clipping */
+@media (max-height: 700px) {
+  .side-ad-rail {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   Category Mid Ad Banner (336x280 Large Rectangle)
+   ============================================================ */
+.category-ad-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 32px;
+  position: relative;
+  z-index: 10;
+}
+
+.category-ad-caption {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.category-ad-caption i {
+  color: var(--accent-green);
+  font-size: 0.8rem;
+}
+
+.ad-slot-336x280 {
+  width: 336px;
+  height: 280px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(19, 27, 46, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ad-slot-336x280:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 30px -2px rgba(16, 185, 129, 0.15);
+}
+
+.ad-placeholder-rect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 24px 20px;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+}
+
+.ad-placeholder-rect .ad-placeholder-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
+}
+
+.ad-placeholder-rect .ad-placeholder-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ad-placeholder-rect .ad-placeholder-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.ad-placeholder-rect .ad-placeholder-size {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.ad-slot-336x280 ins.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.ad-slot-336x280 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-rect,
+.ad-slot-336x280 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-rect {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .category-ad-container {
+    margin: 18px auto 24px;
+  }
+}
+
+/* ============================================================
+   Bottom Medium Rectangle Ad Banner (300x250)
+   ============================================================ */
+.collection-ad-container,
+.game-room-ad-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto 36px;
+  position: relative;
+  z-index: 10;
+}
+
+.collection-ad-caption,
+.game-room-ad-caption {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.collection-ad-caption i,
+.game-room-ad-caption i {
+  color: var(--accent-green);
+  font-size: 0.8rem;
+}
+
+.ad-slot-300x250 {
+  width: 300px;
+  height: 250px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(19, 27, 46, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ad-slot-300x250:hover {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 30px -2px rgba(16, 185, 129, 0.15);
+}
+
+.ad-slot-300x250 ins.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.ad-slot-300x250 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-rect,
+.ad-slot-300x250 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-rect {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .collection-ad-container {
+    margin: 20px auto 26px;
+  }
+}
+
+/* ============================================================
+   Pre-Footer Billboard Ad (970x250)
+   ============================================================ */
+.main-ad-banner-970 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 36px auto 44px auto;
+  padding: 0 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.ad-slot-970x250,
+.ad-slot-970x90 {
+  width: 970px;
+  max-width: 100%;
+  height: 250px;
+  min-height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(19, 27, 46, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.ad-slot-970x250:hover,
+.ad-slot-970x90:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 24px -2px rgba(16, 185, 129, 0.15);
+}
+
+.ad-slot-970x250 ins.adsbygoogle,
+.ad-slot-970x90 ins.adsbygoogle {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.ad-slot-970x250 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-rect,
+.ad-slot-970x250 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-rect,
+.ad-slot-970x250 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-content,
+.ad-slot-970x250 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-content,
+.ad-slot-970x90 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-rect,
+.ad-slot-970x90 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-rect,
+.ad-slot-970x90 ins.adsbygoogle[data-ad-status="filled"] ~ .ad-placeholder-content,
+.ad-slot-970x90 ins.adsbygoogle:has(iframe) ~ .ad-placeholder-content {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .main-ad-banner-970 {
+    margin-bottom: 24px;
+  }
+
+  .ad-slot-970x250,
+  .ad-slot-970x90 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+
+
+
+
+
